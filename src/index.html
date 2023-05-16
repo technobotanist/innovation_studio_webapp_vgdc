@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Website</title>
+	<title>Innovation Studio Prototype</title>
 	<style>
 		body {
 			margin: 0;
@@ -36,18 +36,33 @@
 			padding: 10px; /* Add some padding to the container */
 			box-sizing: border-box; /* Include the padding in the width and height calculations */
 			border: 1px solid #ccc; /* Add a border to the container */
-			
 		}
 		iframe {
 			width: 100%;
 			height: 100%;
 			border: none;
 		}
+        #iframe-cover {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: calc(75% - 20px);
+            height: calc(100% - 120px);
+            background: rgba(0, 0, 0, 0.5);
+            display: block;
+            z-index: 100;
+        }
+        #iframe-cover img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
 	</style>
 </head>
 <body>
 	<div id="title">
-		<h1>My Website</h1>
+		<h1>Innovation Studio Prototype</h1>
 	</div>
 	<div id="navigation">
 		<ul>
@@ -57,15 +72,9 @@
 	</div>
     <div id="iframe-container">
 	    <!-- <iframe src="https://itch.io/embed/1891105" width="552"></iframe> -->
-        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="false" mozallowfullscreen="false" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html" msallowfullscreen="false" id="game_drop" frameborder="0" allowfullscreen="false"></iframe>
+        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html" msallowfullscreen="true" frameborder="0" allowfullscreen="true"></iframe>
     </div>
-    <script>
-		function changeSrc(src) {
-			// Get the iframe element
-			var iframe = document.getElementById('my-iframe');
-			// Set the src attribute to the new URL
-			iframe.src = src;
-		}
-	</script>
+    <!-- <div id="iframe-cover"></div> -->
+    <script src="gamepad-controls.js"></script>
 </body>
 </html>

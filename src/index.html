@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#title {
+            position: fixed;
+            top: 0;
+            left: 0;
+			background-color: #333;
+			color: #fff;
+            height: 100px;
+            width: 80%;
+			padding: 10px;
+		}
+		#navigation {
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 25%;
+			background-color: #eee;
+			overflow-y: scroll;
+			padding: 10px;
+		}
+		#iframe-container {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: calc(75% - 20px); /* Set the width to be the full screen minus the width of the navigation */
+			height: calc(100% - 120px); /* Set the height to be the full screen minus the height of the title */
+			padding: 10px; /* Add some padding to the container */
+			box-sizing: border-box; /* Include the padding in the width and height calculations */
+			border: 1px solid #ccc; /* Add a border to the container */
+			
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="title">
+		<h1>My Website</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html')">Tron Brick Breaker</a></li>
+			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html')">Inflipity</a></li>
+		</ul>
+	</div>
+    <div id="iframe-container">
+	    <!-- <iframe src="https://itch.io/embed/1891105" width="552"></iframe> -->
+        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="false" mozallowfullscreen="false" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html" msallowfullscreen="false" id="game_drop" frameborder="0" allowfullscreen="false"></iframe>
+    </div>
+    <script>
+		function changeSrc(src) {
+			// Get the iframe element
+			var iframe = document.getElementById('my-iframe');
+			// Set the src attribute to the new URL
+			iframe.src = src;
+		}
+	</script>
+</body>
+</html>

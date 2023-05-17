@@ -3,9 +3,12 @@
 <head>
 	<title>Innovation Studio Prototype</title>
 	<style>
-		body {
+		#main {
 			margin: 0;
 			padding: 0;
+		}
+		#main.locked {
+			cursor: none;
 		}
 		#title {
             position: fixed;
@@ -35,12 +38,15 @@
 			height: calc(100% - 120px); /* Set the height to be the full screen minus the height of the title */
 			padding: 10px; /* Add some padding to the container */
 			box-sizing: border-box; /* Include the padding in the width and height calculations */
-			border: 1px solid #ccc; /* Add a border to the container */
+			z-index: 10;
 		}
 		iframe {
 			width: 100%;
 			height: 100%;
 			border: none;
+		}
+		#my-iframe {
+			z-index: 0;
 		}
         #iframe-cover {
             position: fixed;
@@ -48,33 +54,36 @@
             left: 0;
             width: calc(75% - 20px);
             height: calc(100% - 120px);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgb(67, 66, 66);
             display: block;
             z-index: 100;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
         }
-        #iframe-cover img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
+		#cover-text {
+			color:rgb(255, 255, 255);
+		}
 	</style>
 </head>
-<body>
+<body id="main">
 	<div id="title">
-		<h1>Innovation Studio Prototype</h1>
+		<h2 id="name">Innovation Studio Prototype</h2>
+		<h3 id="creator">Test</h3>
 	</div>
 	<div id="navigation">
 		<ul>
-			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html')">Tron Brick Breaker</a></li>
-			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html')">Inflipity</a></li>
+			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html', false, 'jsons/tron_brick_breaker.json')">Tron Brick Breaker</a></li>
+			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html', false, 'jsons/inflipity.json')">Inflipity</a></li>
 		</ul>
 	</div>
     <div id="iframe-container">
-	    <!-- <iframe src="https://itch.io/embed/1891105" width="552"></iframe> -->
-        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html" msallowfullscreen="true" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="" msallowfullscreen="true" frameborder="0" allowfullscreen="true"></iframe>
     </div>
-    <!-- <div id="iframe-cover"></div> -->
+    <div id="iframe-cover">
+		<h1 id="cover-text">Select Game from Right</h1>
+	</div>
     <script src="gamepad-controls.js"></script>
 </body>
 </html>

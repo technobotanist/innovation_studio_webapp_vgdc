@@ -4,8 +4,11 @@
 	<title>Innovation Studio Prototype</title>
 	<style>
 		#main {
-			margin: 0;
-			padding: 0;
+			color: greenyellow;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 10%;
+			margin-bottom: 10%;
 		}
 		#main.locked {
 			cursor: none;
@@ -67,23 +70,25 @@
 		}
 	</style>
 </head>
-<body id="main">
-	<div id="title">
-		<h2 id="name">Innovation Studio Prototype</h2>
-		<h3 id="creator">Test</h3>
-	</div>
-	<div id="navigation">
-		<ul>
-			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html', false, 'jsons/tron_brick_breaker.json')">Tron Brick Breaker</a></li>
-			<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html', false, 'jsons/inflipity.json')">Inflipity</a></li>
-		</ul>
-	</div>
-    <div id="iframe-container">
-        <iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="" msallowfullscreen="true" frameborder="0" allowfullscreen="true"></iframe>
-    </div>
-    <div id="iframe-cover">
-		<h1 id="cover-text">Select Game from Right</h1>
-	</div>
+<body>
+	<div id="main">	
+		<div id="title">
+			<h2 id="name">Innovation Studio Prototype</h2>
+			<h3 id="creator">Test</h3>
+		</div>
+		<div id="navigation">
+			<ul>
+				<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html', false, 'jsons/tron_brick_breaker.json')">Tron Brick Breaker</a></li>
+				<li><a href="#" onclick="changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html', false, 'jsons/inflipity.json')">Inflipity</a></li>
+			</ul>
+		</div>
+		<div id="iframe-container">
+			<iframe id="my-iframe" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" src="" msallowfullscreen="true" frameborder="0" allowfullscreen="true"></iframe>
+		</div>
+		<div id="iframe-cover">
+			<h1 id="cover-text">Select Game from Right</h1>
+		</div>
+	</div>	
     <script src="gamepad-controls.js"></script>
 </body>
 </html>

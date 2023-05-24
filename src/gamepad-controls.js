@@ -13,7 +13,7 @@ var gameToPlayURL = "";
 var sections = [];
 let activeSectionIndex = 0;
 
-// Set the initial active section
+// Set the list of hoverable/clickable sections (games + the cover)
 function loadSectionList()
 {
   sections = document.getElementsByClassName('section');
@@ -54,6 +54,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+// Triggers the onclick event of the html element provided
 function triggerLinkClick(link) {
   console.log(link);
   var clickEvent = new MouseEvent('click', {
@@ -92,6 +93,7 @@ function handleDpadInput(direction) {
   sections[activeSectionIndex].classList.add('active');
 }
 
+// When clicking the cover, populate the iframe with the gameToPlayURL
 cover.addEventListener("click", function() {
   if(!inIframe && gameToPlayURL != "")
   {
@@ -102,6 +104,7 @@ cover.addEventListener("click", function() {
   }
 });
 
+// Reapply the iframe cover and remove the iframe's src
 function applyCover()
 {
   unlockMouse();
@@ -122,6 +125,7 @@ function unlockMouse()
   
 }
 
+// Change the src of the game you want to play and if the fromPlayClick field is true, load the game into the iframe
 function changeSrc(src, fromPlayClick = false, jsonURL = "")
 {
   console.log("change source");

@@ -1,11 +1,10 @@
 // Function to populate the list with links
 var id_counter = 0;
 
+// create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {
     const linkList = document.getElementById('game-list');
-    
-    // Loop through the JSON data and create list items with links
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.href = "#";

@@ -96,6 +96,7 @@ cover.addEventListener("click", function() {
   if(!inIframe && gameToPlayURL != "")
   {
     changeSrc(gameToPlayURL, true);
+    lockMouse();
     inIframe = true;
     cover.style.zIndex = -1;
   }
@@ -103,7 +104,7 @@ cover.addEventListener("click", function() {
 
 function applyCover()
 {
-  console.log("unlock mouse");
+  unlockMouse();
   inIframe = false;
   iframe.src = "";
   cover.style.zIndex = 100;

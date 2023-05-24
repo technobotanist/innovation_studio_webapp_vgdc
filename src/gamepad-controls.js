@@ -10,8 +10,86 @@ var iframe = document.getElementById("my-iframe");
 
 var gameToPlayURL = "";
 
+const sections = document.querySelectorAll('.section');
+let activeSectionIndex = 0;
+
+// Set the initial active section
+sections[activeSectionIndex].classList.add('active');
+
+// Event listener for keyboard inputs
+document.addEventListener('keydown', (event) => {
+  const keyCode = event.key;
+  if (keyCode === "ArrowUp")
+  {
+    // Up arrow key
+    handleDpadInput('up');
+  }
+  else if (keyCode === "ArrowDown")
+  {
+    // Down arrow key
+    handleDpadInput('down');
+  }
+  else if (keyCode === "ArrowLeft")
+  {
+    // Left arrow key
+    handleDpadInput('left');
+  }
+  else if (keyCode === "ArrowRight")
+  {
+    // Right arrow key
+    handleDpadInput('right');
+  }
+  else if (inIframe && keyCode == "+")
+  {
+    applyCover();
+  }
+  else if (!inIframe && keyCode === ' ') {
+    console.log("enter");
+    event.preventDefault(); // Prevent default behavior if needed
+    triggerLinkClick(document.getElementById(sections[activeSectionIndex].id));         // Trigger the link's onclick function
+  }
+});
+
+function triggerLinkClick(link) {
+  console.log(link);
+  var clickEvent = new MouseEvent('click', {
+    view: window,
+    bubbles: true,
+    cancelable: true
+  });
+
+  link.dispatchEvent(clickEvent);
+}
+
+// Handle D-pad input
+function handleDpadInput(direction) {
+  // Remove active class from current section
+  sections[activeSectionIndex].classList.remove('active');
+
+  // Update active section index based on the direction
+  if (direction === 'up' && activeSectionIndex > 0 && activeSectionIndex < sections.length - 1)
+  {
+    activeSectionIndex--;
+  }
+  else if (direction === 'down' && activeSectionIndex < sections.length - 2)
+  {
+    activeSectionIndex++;
+  }
+  else if (gameToPlayURL != "" && direction === 'left' && activeSectionIndex != sections.length - 1)
+  {
+    activeSectionIndex = sections.length - 1;
+  }
+  else if (!inIframe && direction === 'right' && activeSectionIndex == sections.length - 1)
+  {
+    activeSectionIndex = 0;
+  }
+
+  // Add active class to the new section
+  sections[activeSectionIndex].classList.add('active');
+}
+
 cover.addEventListener("click", function() {
-  if(!inIframe)
+  if(!inIframe && gameToPlayURL != "")
   {
     console.log("lock mouse");
     changeSrc(gameToPlayURL, true);
@@ -27,44 +105,10 @@ function applyCover()
   console.log("unlock mouse");
   inIframe = false;
   unlockMouse();
+  iframe.src = "";
   //cover.style.display = 'block';
   cover.style.zIndex = 100;
 }
-
-document.addEventListener("keydown", function(event)
-{
-  if(inIframe && event.key == "+")
-  {
-    applyCover();
-  }
-});
-
-document.addEventListener("mousemove", (event) => {
-  if(main.classList.contains("locked"))
-  {
-    console.log("constrain mouse");
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    const rect = iframe.getBoundingClientRect();
-    const left = rect.left + window.scrollX;
-    const top = rect.top + window.scrollY;
-    const right = rect.right + window.scrollX;
-    const bottom = rect.bottom + window.scrollY;
-    if (event.clientX < left) {
-      event.clientX = left;
-    }
-    if (event.clientX > right) {
-      event.clientX = right;
-    }
-    if (event.clientY < top) {
-      event.clientY = top;
-    }
-    if (event.clientY > bottom) {
-      event.clientY = bottom;
-    }
-  }
-  
-});
 
 // Lock the mouse position
 function lockMouse()
@@ -80,6 +124,7 @@ function unlockMouse()
 
 function changeSrc(src, fromPlayClick = false, jsonURL = "")
 {
+  console.log("change source");
   // Set the src attribute to the new URL
   if(fromPlayClick)
   {
@@ -89,6 +134,7 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
   {
     iframe.src = "";
     gameToPlayURL = src;
+    handleDpadInput('left');
 
     var request = new XMLHttpRequest();
 

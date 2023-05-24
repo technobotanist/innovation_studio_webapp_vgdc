@@ -10,11 +10,15 @@ var iframe = document.getElementById("my-iframe");
 
 var gameToPlayURL = "";
 
-const sections = document.querySelectorAll('.section');
+var sections = [];
 let activeSectionIndex = 0;
 
 // Set the initial active section
-sections[activeSectionIndex].classList.add('active');
+function loadSectionList()
+{
+  sections = document.getElementsByClassName('section');
+  coverText.classList.remove("active");
+}
 
 // Event listener for keyboard inputs
 document.addEventListener('keydown', (event) => {
@@ -91,11 +95,8 @@ function handleDpadInput(direction) {
 cover.addEventListener("click", function() {
   if(!inIframe && gameToPlayURL != "")
   {
-    console.log("lock mouse");
     changeSrc(gameToPlayURL, true);
     inIframe = true;
-    lockMouse();
-    //cover.style.display = 'none';
     cover.style.zIndex = -1;
   }
 });
@@ -104,22 +105,20 @@ function applyCover()
 {
   console.log("unlock mouse");
   inIframe = false;
-  unlockMouse();
   iframe.src = "";
-  //cover.style.display = 'block';
   cover.style.zIndex = 100;
 }
 
 // Lock the mouse position
 function lockMouse()
 {
-  main.classList.add("locked");
+  
 }
 
 // Unlock the mouse position
 function unlockMouse()
 {
-  main.classList.remove("locked");
+  
 }
 
 function changeSrc(src, fromPlayClick = false, jsonURL = "")

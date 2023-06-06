@@ -4,17 +4,17 @@ var id_counter = 0;
 // create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {
-    const linkList = document.getElementById('game-list');
-    const listItem = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = "#";
-    link.textContent = jsonData.name;
-    link.onclick = () => eval(jsonData.onclick);
-    link.classList.add("section");
-    link.id = id_counter.toString();
-    id_counter++;
-    listItem.appendChild(link);
-    linkList.appendChild(listItem);
+  const linkList = document.getElementById('game-list');
+  const listItem = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = "#";
+  link.textContent = jsonData.name;
+  link.onclick = () => eval(jsonData.onclick);
+  link.classList.add("section");
+  link.id = id_counter.toString();
+  id_counter++;
+  listItem.appendChild(link);
+  linkList.appendChild(listItem);
 }
 
 // Folder path where the JSON files are located

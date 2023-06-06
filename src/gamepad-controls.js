@@ -98,7 +98,6 @@ cover.addEventListener("click", function() {
   if(!inIframe && gameToPlayURL != "")
   {
     changeSrc(gameToPlayURL, true);
-    lockMouse();
     inIframe = true;
     cover.style.zIndex = -1;
   }
@@ -107,22 +106,9 @@ cover.addEventListener("click", function() {
 // Reapply the iframe cover and remove the iframe's src
 function applyCover()
 {
-  unlockMouse();
   inIframe = false;
   iframe.src = "";
   cover.style.zIndex = 100;
-}
-
-// Lock the mouse position
-function lockMouse()
-{
-  
-}
-
-// Unlock the mouse position
-function unlockMouse()
-{
-  
 }
 
 // Change the src of the game you want to play and if the fromPlayClick field is true, load the game into the iframe

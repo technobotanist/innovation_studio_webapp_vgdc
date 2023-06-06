@@ -1,17 +1,50 @@
 // Function to populate the list with links
 var id_counter = 0;
 
+class Game
+{
+  constructor(id, name, byline, json_src)
+  {
+    this.id = id;
+    this.name = name;
+    this.byline = byline;
+    this.click_count = 0;
+    this.json_src = json_src;
+  }
+
+  incrementClickCount()
+  {
+    this.click_count++;
+  }
+}
+
+function getGameByName(name)
+{
+  for(let i = 0; i < game_list.length; i++)
+  {
+    if(game_list[i].name == name)
+    {
+      return game_list[i];
+    }
+  }
+  return null;
+}
+
+var game_list = [];
+
 // create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {
   const linkList = document.getElementById('game-list');
   const listItem = document.createElement('li');
   const link = document.createElement('a');
+  var game = new Game(id_counter, jsonData.name, jsonData.creator, jsonData.json_src);
+  game_list[id_counter] = game;
   link.href = "#";
-  link.textContent = jsonData.name;
+  link.textContent = game.name;
   link.onclick = () => eval(jsonData.onclick);
   link.classList.add("section");
-  link.id = id_counter.toString();
+  link.id = game.id.toString();
   id_counter++;
   listItem.appendChild(link);
   linkList.appendChild(listItem);
@@ -58,5 +91,3 @@ function fetchAndPopulateList()
 
 // Call the fetchAndPopulateList function to initiate the process
 fetchAndPopulateList();
-
-//test comment

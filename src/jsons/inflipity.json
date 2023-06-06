@@ -1,5 +1,6 @@
 {
     "name": "Inflipity",
     "creator": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
+    "json_src": "jsons/inflipity.json",
     "onclick": "changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html', false, 'jsons/inflipity.json')"
 }

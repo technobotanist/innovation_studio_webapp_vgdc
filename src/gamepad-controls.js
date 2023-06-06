@@ -151,7 +151,15 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
         nameHeader.innerHTML = data.name;
         creatorHeader.innerHTML = data.creator;
         coverText.innerHTML = "Click Here to Play";
+
+        console.log(game_list);
+        console.log(data.name);
+        getGameByName(data.name).incrementClickCount();
+        console.log(getGameByName(data.name).click_count);
+
         console.log(data);
+
+        sortList();
       } else {
         // We reached our target server, but it returned an error
         console.error('Error loading JSON file');
@@ -167,4 +175,25 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
 
     applyCover();
   }
+}
+
+function sortList() {
+  var list = document.getElementById('game-list');
+
+  // Get all the list items
+  var listItems = Array.from(list.getElementsByTagName('li'));
+
+  // Sort the list items based on the click counts
+  listItems.sort(function(a, b) {
+    console.log(a.textContent);
+    var aClicks = parseInt(getGameByName(a.textContent).click_count);
+    var bClicks = parseInt(getGameByName(b.textContent).click_count);
+
+    return bClicks - aClicks;
+  });
+
+  // Reorder the list items in the DOM
+  listItems.forEach(function(item) {
+    list.appendChild(item);
+  });
 }

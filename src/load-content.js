@@ -4,11 +4,12 @@ var id_counter = 0;
 //This class is for long term storage of information about the game that isn't used for initial loading of the game object such as how many times a game has been clicked on
 class Game
 {
-  constructor(id, name, byline, json_src)
+  constructor(id, title, byline, description, json_src)
   {
     this.id = id;
-    this.name = name;
+    this.title = title;
     this.byline = byline;
+    this.description = description;
     this.click_count = 0;
     this.json_src = json_src;
   }
@@ -19,11 +20,13 @@ class Game
   }
 }
 
-function getGameByName(name)
+var game_list = [];
+
+function getGameByTitle(title)
 {
   for(let i = 0; i < game_list.length; i++)
   {
-    if(game_list[i].name == name)
+    if(game_list[i].title == title)
     {
       return game_list[i];
     }
@@ -31,18 +34,16 @@ function getGameByName(name)
   return null;
 }
 
-var game_list = [];
-
 // create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {
   const linkList = document.getElementById('game-list');
   const listItem = document.createElement('li');
   const link = document.createElement('a');
-  var game = new Game(id_counter, jsonData.name, jsonData.creator, jsonData.json_src);
+  var game = new Game(id_counter, jsonData.title, jsonData.byline, jsonData.description, jsonData.json_src);
   game_list[id_counter] = game;
   link.href = "#";
-  link.textContent = game.name;
+  link.textContent = game.title;
   link.onclick = () => eval(jsonData.onclick);
   link.classList.add("section");
   link.id = game.id.toString();

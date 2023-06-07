@@ -134,14 +134,14 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
       if (request.status >= 200 && request.status < 400) {
         // Success!
         var data = JSON.parse(request.responseText);
-        nameHeader.innerHTML = data.name;
-        creatorHeader.innerHTML = data.creator;
+        nameHeader.innerHTML = data.title;
+        creatorHeader.innerHTML = data.byline;
         coverText.innerHTML = "Click Here to Play";
 
         console.log(game_list);
-        console.log(data.name);
-        getGameByName(data.name).incrementClickCount();
-        console.log(getGameByName(data.name).click_count);
+        console.log(data.title);
+        getGameByName(data.title).incrementClickCount();
+        console.log(getGameByName(data.title).click_count);
 
         console.log(data);
 

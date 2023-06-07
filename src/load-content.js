@@ -1,6 +1,7 @@
 // Function to populate the list with links
 var id_counter = 0;
 
+//This class is for long term storage of information about the game that isn't used for initial loading of the game object such as how many times a game has been clicked on
 class Game
 {
   constructor(id, name, byline, json_src)

@@ -3,5 +3,5 @@
     "byline": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
     "description": "",
     "json_src": "jsons/inflipity.json",
-    "onclick": "changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7544310/index.html', false, 'jsons/inflipity.json')"
+    "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')"
 }

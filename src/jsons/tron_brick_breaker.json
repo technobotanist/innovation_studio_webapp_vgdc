@@ -3,5 +3,5 @@
     "byline": "Elliott Schultz",
     "description": "",
     "json_src": "jsons/tron_brick_breaker.json",
-    "onclick": "changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html', false, 'jsons/tron_brick_breaker.json')"
+    "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')"
 }

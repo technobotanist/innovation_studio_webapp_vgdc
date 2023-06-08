@@ -140,8 +140,8 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
 
         console.log(game_list);
         console.log(data.title);
-        getGameByName(data.title).incrementClickCount();
-        console.log(getGameByName(data.title).click_count);
+        getGameByTitle(data.title).incrementClickCount();
+        console.log(getGameByTitle(data.title).click_count);
 
         console.log(data);
 
@@ -172,8 +172,8 @@ function sortList() {
   // Sort the list items based on the click counts
   listItems.sort(function(a, b) {
     console.log(a.textContent);
-    var aClicks = parseInt(getGameByName(a.textContent).click_count);
-    var bClicks = parseInt(getGameByName(b.textContent).click_count);
+    var aClicks = parseInt(getGameByTitle(a.textContent).click_count);
+    var bClicks = parseInt(getGameByTitle(b.textContent).click_count);
 
     return bClicks - aClicks;
   });

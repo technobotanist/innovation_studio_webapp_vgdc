@@ -1,3 +1,13 @@
+function callWriteJSON(jsonData)
+{
+  // Call the React function from the separate script
+  if (typeof window.writeJSON === 'function') {
+    window.writeJSON(jsonData); // Call the function defined in the React component
+  } else {
+    console.error('React function not accessible.');
+  }
+}
+
 // Function to populate the list with links
 var id_counter = 0;
 
@@ -24,7 +34,8 @@ class Game
   incrementClickCount()
   {
     this.click_count++;
-    //callWriteJSON(this.toJSON());
+    console.log(this.toJSON());
+    callWriteJSON(this.toJSON());
   }
 
   toJSON()
@@ -46,7 +57,7 @@ class Game
       "click_count": this.click_count
     };
 
-    return JSON.stringify(data, null, 2);
+    return data;
   }
 }
 

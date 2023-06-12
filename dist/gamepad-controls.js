@@ -135,7 +135,7 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
         // Success!
         var data = JSON.parse(request.responseText);
         nameHeader.innerHTML = data.title;
-        creatorHeader.innerHTML = data.byline;
+        creatorHeader.innerHTML = data.authors;
         coverText.innerHTML = "Click Here to Play";
 
         console.log(game_list);

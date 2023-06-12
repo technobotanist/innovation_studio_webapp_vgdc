@@ -4,6 +4,14 @@ const fs = require('fs');
 const app = express();
 const port = 3001; // Choose a port number
 
+// Enable CORS for all routes
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
+
 app.use(express.json());
 
 app.post('/updateJson', (req, res) => {
@@ -14,7 +22,7 @@ app.post('/updateJson', (req, res) => {
   fs.readFile(newData.json_src, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Internal Server Error');
+      return res.status(500).send(newData);
     }
 
     // Parse the JSON data
@@ -27,7 +35,7 @@ app.post('/updateJson', (req, res) => {
     fs.writeFile(jsonData.json_src, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
       if (err) {
         console.error(err);
-        return res.status(500).send('Internal Server Error');
+        return res.status(500).send(jsonData);
       }
 
       return res.sendStatus(200);

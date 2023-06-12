@@ -1,14 +1,24 @@
+function callWriteJSON(jsonData)
+{
+  // Call the React function from the separate script
+  if (typeof window.writeJSON === 'function') {
+    window.writeJSON(jsonData); // Call the function defined in the React component
+  } else {
+    console.error('React function not accessible.');
+  }
+}
+
 // Function to populate the list with links
 var id_counter = 0;
 
 //This class is for long term storage of information about the game that isn't used for initial loading of the game object such as how many times a game has been clicked on
 class Game
 {
-  constructor(id, title, byline, description, genres, controls, supported_controllers, main_image, images, json_src, onclick, date_added, click_count)
+  constructor(id, title, authors, description, genres, controls, supported_controllers, main_image, images, json_src, onclick, date_added, click_count)
   {
     this.id = id;
     this.title = title;
-    this.byline = byline;
+    this.authors = authors;
     this.description = description;
     this.genres = genres;
     this.controls = controls;
@@ -24,7 +34,8 @@ class Game
   incrementClickCount()
   {
     this.click_count++;
-    //callWriteJSON(this.toJSON());
+    console.log(this.toJSON());
+    callWriteJSON(this.toJSON());
   }
 
   toJSON()
@@ -33,7 +44,7 @@ class Game
     {
       "id": this.id,
       "title": this.title,
-      "byline": this.byline,
+      "authors": this.authors,
       "description": this.description,
       "genres": this.genres,
       "controls": this.controls,
@@ -46,7 +57,7 @@ class Game
       "click_count": this.click_count
     };
 
-    return JSON.stringify(data, null, 2);
+    return data;
   }
 }
 
@@ -72,7 +83,7 @@ function populateList(jsonData)
   const link = document.createElement('a');
 
   var id = jsonData.id == -1 ? id_counter : jsonData.id;
-  var game = new Game(id, jsonData.title, jsonData.byline, jsonData.description, jsonData.genres, jsonData.controls, jsonData.supported_controllers, jsonData.main_image, jsonData.images, jsonData.json_src, jsonData.onclick, jsonData.date_added, jsonData.click_count);
+  var game = new Game(id, jsonData.title, jsonData.authors, jsonData.description, jsonData.genres, jsonData.controls, jsonData.supported_controllers, jsonData.main_image, jsonData.images, jsonData.json_src, jsonData.onclick, jsonData.date_added, jsonData.click_count);
   game_list[id_counter] = game;
   //callWriteJSON(game.toJSON());
 

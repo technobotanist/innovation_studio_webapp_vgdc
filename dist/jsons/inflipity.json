@@ -1,15 +1,23 @@
 {
-    "id": -1,
-    "title": "Inflipity",
-    "byline": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
-    "description": "A one button game where you control an alien running through space.",
-    "genres": ["action"],
-    "controls": "Tap the screen to change gravity and speed up the game",
-    "supported_controllers": [1, 1, 0],
-    "main_image": "[insert file path to main image here]",
-    "images": ["(insert file paths for images here separated by commas)"],
-    "json_src": "jsons/inflipity.json",
-    "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')",
-    "date_added": "2023-06-09",
-    "click_count": 0
+  "id": 0,
+  "title": "Inflipity",
+  "authors": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
+  "description": "A one button game where you control an alien running through space.",
+  "genres": [
+    "action"
+  ],
+  "controls": "Tap the screen to change gravity and speed up the game",
+  "supported_controllers": [
+    1,
+    1,
+    0
+  ],
+  "main_image": "[insert file path to main image here]",
+  "images": [
+    "(insert file paths for images here separated by commas)"
+  ],
+  "json_src": "./dist/jsons/inflipity.json",
+  "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')",
+  "date_added": "2023-06-09",
+  "click_count": 2
 }

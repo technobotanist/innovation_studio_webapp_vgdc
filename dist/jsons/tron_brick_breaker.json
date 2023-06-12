@@ -1,15 +1,24 @@
 {
-    "id": -1,
-    "title": "Tron Brick Breaker",
-    "byline": "Elliott Schultz",
-    "description": "A classic game of Brick Breaker in an art style inspired by Tron",
-    "genres": ["action", "survival"],
-    "controls": "Move left and right to control the bottom paddle to keep the ball bouncing.",
-    "supported_controllers": [0, 1, 1],
-    "main_image": "[insert file path to main image here]",
-    "images": ["(insert file paths for images here separated by commas)"],
-    "json_src": "jsons/tron_brick_breaker.json",
-    "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')",
-    "date_added": "2023-06-08",
-    "click_count": 0
+  "id": 0,
+  "title": "Tron Brick Breaker",
+  "authors": "Elliott Schultz",
+  "description": "A classic game of Brick Breaker in an art style inspired by Tron",
+  "genres": [
+    "action",
+    "survival"
+  ],
+  "controls": "Move left and right to control the bottom paddle to keep the ball bouncing.",
+  "supported_controllers": [
+    0,
+    1,
+    1
+  ],
+  "main_image": "[insert file path to main image here]",
+  "images": [
+    "(insert file paths for images here separated by commas)"
+  ],
+  "json_src": "./dist/jsons/tron_brick_breaker.json",
+  "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')",
+  "date_added": "2023-06-08",
+  "click_count": 3
 }

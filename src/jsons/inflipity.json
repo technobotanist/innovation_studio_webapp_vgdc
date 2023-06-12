@@ -1,7 +1,0 @@
-{
-    "title": "Inflipity",
-    "byline": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
-    "description": "",
-    "json_src": "jsons/inflipity.json",
-    "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')"
-}

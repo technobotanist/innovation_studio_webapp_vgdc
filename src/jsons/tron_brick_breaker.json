@@ -1,7 +1,0 @@
-{
-    "title": "Tron Brick Breaker",
-    "byline": "Elliott Schultz",
-    "description": "",
-    "json_src": "jsons/tron_brick_breaker.json",
-    "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')"
-}

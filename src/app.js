@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 const App = () => {
 
     const writeJSON = (newData) => {
-        console.log(newData);
         axios
           .post('http://localhost:3001/updateJson', newData)
           .then(() => {

@@ -34,8 +34,6 @@ class Game
   incrementClickCount()
   {
     this.click_count++;
-    console.log(this.toJSON());
-    callWriteJSON(this.toJSON());
   }
 
   toJSON()
@@ -68,6 +66,18 @@ function getGameByTitle(title)
   for(let i = 0; i < game_list.length; i++)
   {
     if(game_list[i].title == title)
+    {
+      return game_list[i];
+    }
+  }
+  return null;
+}
+
+function getGameByJSONSrc(json_src)
+{
+  for(let i = 0; i < game_list.length; i++)
+  {
+    if(game_list[i].json_src == json_src)
     {
       return game_list[i];
     }

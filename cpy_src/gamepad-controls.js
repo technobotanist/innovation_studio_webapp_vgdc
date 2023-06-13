@@ -112,7 +112,7 @@ function applyCover()
 }
 
 // Change the src of the game you want to play and if the fromPlayClick field is true, load the game into the iframe
-function changeSrc(src, fromPlayClick = false, jsonURL = "")
+function changeSrc(src, fromPlayClick = false, json_src = "")
 {
   console.log("change source");
   // Set the src attribute to the new URL
@@ -128,7 +128,7 @@ function changeSrc(src, fromPlayClick = false, jsonURL = "")
 
     var request = new XMLHttpRequest();
 
-    request.open('GET', jsonURL);
+    request.open('GET', json_src);
 
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {

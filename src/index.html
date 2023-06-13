@@ -72,9 +72,16 @@
 	<div id="root"></div>
 	<script src="bundle.js"></script>
 	<script src="load-content.js"></script>
+	<script src="reload-content.js"></script>
 	<script src="gamepad-controls.js"></script>
 	<script>
 		window.onload = loadSectionList();
+		function warning() 
+		{
+			handlePageUnload();
+			return "Updating Files";
+		} 
+		window.onbeforeunload = warning; 
 	</script>
 </body>
 </html>

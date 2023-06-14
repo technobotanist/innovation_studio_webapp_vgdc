@@ -1,5 +1,0 @@
-{
-    "name": "Tron Brick Breaker",
-    "creator": "Elliott Schultz",
-    "onclick": "changeSrc('https://v6p9d9t4.ssl.hwcdn.net/html/7212792/index.html', false, 'jsons/tron_brick_breaker.json')"
-}

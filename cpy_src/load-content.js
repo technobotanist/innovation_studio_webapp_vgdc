@@ -62,43 +62,6 @@ class Game
 
 var game_list = [];
 
-function getGameByTitle(title)
-{
-  for(let i = 0; i < game_list.length; i++)
-  {
-    if(game_list[i].title == title)
-    {
-      return game_list[i];
-    }
-  }
-  return null;
-}
-
-function setAllGamesVisible()
-{
-  for(let i = 0; i < game_list.length; i++)
-  {
-    game_list[i].visible = true;
-  }
-}
-
-//will set the visible attribute of games that contain all the genres passed in list of genres
-function setVisibleByGenres(genres)
-{
-  setAllGamesVisible();
-  for(let i = 0; i < game_list.length; i++)
-  {
-    for(let j = 0; j < genres.length; j++)
-    {
-      if(!game_list[i].genres.includes(genres[j]))
-      {
-        game_list[i].visible = false;
-        break;
-      }
-    }
-  }
-}
-
 // create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {

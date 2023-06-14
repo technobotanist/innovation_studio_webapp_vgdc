@@ -1,5 +1,5 @@
 {
-  "id": 0,
+  "id": 1,
   "title": "Tron Brick Breaker",
   "authors": "Elliott Schultz",
   "description": "A classic game of Brick Breaker in an art style inspired by Tron",
@@ -20,5 +20,5 @@
   "json_src": "./dist/jsons/tron_brick_breaker.json",
   "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')",
   "date_added": "2023-06-08",
-  "click_count": 8
+  "click_count": 18
 }

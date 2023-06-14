@@ -29,6 +29,7 @@ class Game
     this.onclick = onclick;
     this.date_added = date_added;
     this.click_count = click_count;
+    this.visible = true;
   }
 
   incrementClickCount()
@@ -73,16 +74,29 @@ function getGameByTitle(title)
   return null;
 }
 
-function getGameByJSONSrc(json_src)
+function setAllGamesVisible()
 {
   for(let i = 0; i < game_list.length; i++)
   {
-    if(game_list[i].json_src == json_src)
+    game_list[i].visible = true;
+  }
+}
+
+//will set the visible attribute of games that contain all the genres passed in list of genres
+function setVisibleByGenres(genres)
+{
+  setAllGamesVisible();
+  for(let i = 0; i < game_list.length; i++)
+  {
+    for(let j = 0; j < genres.length; j++)
     {
-      return game_list[i];
+      if(!game_list[i].genres.includes(genres[j]))
+      {
+        game_list[i].visible = false;
+        break;
+      }
     }
   }
-  return null;
 }
 
 // create a listitem using the json data and add it to the game list

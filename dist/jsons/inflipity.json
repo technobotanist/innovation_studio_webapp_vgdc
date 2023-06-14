@@ -19,5 +19,5 @@
   "json_src": "./dist/jsons/inflipity.json",
   "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')",
   "date_added": "2023-06-09",
-  "click_count": 5
+  "click_count": 9
 }

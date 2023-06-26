@@ -61,29 +61,31 @@ class Game
 }
 
 var game_list = [];
+var slider = [];
 
 // create a listitem using the json data and add it to the game list
 function populateList(jsonData)
 {
-  const linkList = document.getElementById('game-list');
+  /* const linkList = document.getElementById('game-list');
   const listItem = document.createElement('li');
-  const link = document.createElement('a');
+  const link = document.createElement('a'); */
 
   var id = jsonData.id == -1 ? id_counter : jsonData.id;
   var game = new Game(id, jsonData.title, jsonData.authors, jsonData.description, jsonData.genres, jsonData.controls, jsonData.supported_controllers, jsonData.main_image, jsonData.images, jsonData.json_src, jsonData.onclick, jsonData.date_added, jsonData.click_count);
   game_list[id_counter] = game;
+  slider.push(game.toJSON());
   //callWriteJSON(game.toJSON());
 
-  link.href = "#";
+  /* link.href = "#";
   link.textContent = game.title;
   link.onclick = () => eval(game.onclick);
   link.classList.add("section");
-  link.id = game.id.toString();
+  link.id = game.id.toString(); */
   
   id_counter++;
   
-  listItem.appendChild(link);
-  linkList.appendChild(listItem);
+  /* listItem.appendChild(link);
+  linkList.appendChild(listItem); */
 }
 
 // Folder path where the JSON files are located

@@ -1,0 +1,15 @@
+{
+    "id": -1,
+    "title": "Terra Nil",
+    "authors": "",
+    "description": "Terra Nil is a game about transforming a barren, lifeless landscape into a thriving, vibrant ecosystem. Turn dead soil into fertile grassland, clean polluted oceans, plant sprawling forests, and create the ideal habitat for animals to call home. Then recycle your buildings and leave no trace that you were there. Reclaim the wasteland.",
+    "genres": ["list", "of genres", "separated by", "commas"],
+    "controls": "",
+    "supported_controllers": ["put a 1 here for touch or 0 if not supported", "put a 1 here for keyboard/mouse or a 0 if not supported", "put a 1 here for controller or a 0 if not supported"],
+    "main_image": "./images/image1.png",
+    "images": ["(insert file paths for images here separated by commas)"],
+    "json_src": "jsons/[insert file name here].json",
+    "onclick": "changeSrc('[insert html src here]', false, 'jsons/[insert file name here].json')",
+    "date_added": "YYYY-MM-DD",
+    "click_count": 0
+}

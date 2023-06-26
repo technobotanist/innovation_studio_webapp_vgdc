@@ -1,5 +1,7 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
+const axios = require('axios');
 
 const app = express();
 const port = 3001; // Choose a port number
@@ -41,6 +43,24 @@ app.post('/updateJson', (req, res) => {
       return res.sendStatus(200);
     });
   });
+});
+
+app.get('/swiper-content', (req, res) => {
+  const folderPath = './dist/jsons/';
+  const fileNames = fs.readdirSync(folderPath);
+  //console.log(fileNames);
+  const fileContents = [];
+
+  fileNames.forEach(fileName => {
+    const filePath = path.join(folderPath, fileName);
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const parsedContent = JSON.parse(fileContent);
+    fileContents.push(parsedContent);
+  });
+
+  console.log(fileContents);
+
+  res.json(fileContents);
 });
 
 app.listen(port, () => {

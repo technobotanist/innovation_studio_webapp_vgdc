@@ -1,4 +1,4 @@
-function handlePageUnload()
+/* function handlePageUnload()
 {
     updateAllJSONFiles();
 }
@@ -12,4 +12,4 @@ function updateAllJSONFiles()
     }
 }
 
-//window.addEventListener('beforeunload', handlePageUnload);
+//window.addEventListener('beforeunload', handlePageUnload); */

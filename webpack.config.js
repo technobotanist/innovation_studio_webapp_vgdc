@@ -29,6 +29,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },  
   devServer: {
@@ -40,6 +44,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/index.html', to: 'index.html' }, // Update the path if needed
+        { from: 'src/main.css', to: 'main.css' },
       ],
     }),
   ],

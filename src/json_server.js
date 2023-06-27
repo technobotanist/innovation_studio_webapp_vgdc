@@ -8,7 +8,7 @@ const port = 3001; // Choose a port number
 
 // Enable CORS for all routes
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://10.154.57.156:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -63,6 +63,6 @@ app.get('/swiper-content', (req, res) => {
   res.json(fileContents);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port, '10.154.57.156', () => {
+  console.log(`Server running on http://10.154.57.156:${port}`);
 });

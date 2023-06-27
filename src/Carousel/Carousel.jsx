@@ -32,7 +32,7 @@ const Carousel = () => {
   const [slider, setSlider] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/swiper-content')
+    axios.get('http://10.154.57.156:3001/swiper-content')
       .then(response => {
         const sliderData = response.data;
         setSlider(sliderData);

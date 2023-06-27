@@ -37,6 +37,7 @@ module.exports = {
   },  
   devServer: {
     static: path.resolve(__dirname, 'dist'),
+    host: '10.154.57.156',
     port: 3000,
     open: true,
   },

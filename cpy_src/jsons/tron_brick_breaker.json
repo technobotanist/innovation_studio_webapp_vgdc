@@ -6,7 +6,7 @@
     "genres": ["action", "survival"],
     "controls": "Move left and right to control the bottom paddle to keep the ball bouncing.",
     "supported_controllers": [0, 1, 1],
-    "main_image": "[insert file path to main image here]",
+    "main_image": "./images/tron-brick-breaker.png",
     "images": ["(insert file paths for images here separated by commas)"],
     "json_src": "./dist/jsons/tron_brick_breaker.json",
     "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')",

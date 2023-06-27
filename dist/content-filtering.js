@@ -1,4 +1,4 @@
-function getGameByTitle(title)
+/* function getGameByTitle(title)
 {
   for(let i = 0; i < game_list.length; i++)
   {
@@ -88,4 +88,4 @@ function sortListByOldest()
   listItems.forEach(function(item) {
     list.appendChild(item);
   });
-}
+} */

@@ -1,4 +1,4 @@
-var inIframe = false;
+/* var inIframe = false;
 var body = document.getElementById("main");
 var nameHeader = document.getElementById("name");
 var creatorHeader = document.getElementById("creator");
@@ -162,3 +162,4 @@ function changeSrc(src, fromPlayClick = false, json_src = "")
     applyCover();
   }
 }
+ */

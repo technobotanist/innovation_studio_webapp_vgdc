@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
+import Carousel from './Carousel/Carousel.jsx';
 
 const App = () => {
 
     const writeJSON = (newData) => {
         axios
-          .post('http://localhost:3001/updateJson', newData)
+          .post('http://10.154.57.156:3001/updateJson', newData)
           .then(() => {
             console.log('JSON file updated successfully');
           })
@@ -18,6 +19,20 @@ const App = () => {
     window.writeJSON = writeJSON;
 
     return (
+        <div className="app">
+          <div className="top-gradient-strip"></div>
+          <div className="top-menu">
+            <p>SORT BY</p>
+          </div>
+          <div className="subheading">
+            <p>RECENTLY ADDED</p>
+          </div>
+          <Carousel />
+          <div className="bottom-gradient-strip"></div>
+        </div>
+      );
+    
+    /* return (
         <div id="main">	
             <div id="title">
                 <h2 id="name">Innovation Studio Arcade Webapp Prototype</h2>
@@ -33,7 +48,7 @@ const App = () => {
                 <h1 id="cover-text" className="section">Select Game from Right</h1>
             </div>
         </div>
-    );
+    ); */
 };
 
 export default App;

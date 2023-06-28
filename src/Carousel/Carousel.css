@@ -38,7 +38,7 @@
 .image-container {
     position: relative;
     display: inline-block;
-    width: 60%;
+    width: 70%;
 }
 
 .myswiper-slider p {
@@ -79,6 +79,7 @@
 }
 
 .swiper-slide-active h1 {
+    padding-top: 25px;
     padding-bottom: 25px;
     opacity: 1;
     font-size: 48px;

@@ -11,5 +11,6 @@
     "json_src": "jsons/[insert file name here].json",
     "onclick": "changeSrc('[insert html src here]', false, 'jsons/[insert file name here].json')",
     "date_added": "YYYY-MM-DD",
-    "click_count": 0
+    "session_click_count": 0,
+    "total_click_count": 0
 }

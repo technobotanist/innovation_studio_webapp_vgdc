@@ -11,5 +11,6 @@
     "json_src": "./dist/jsons/tron_brick_breaker.json",
     "onclick": "changeSrc('game_builds/tron_brick_breaker/index.html', false, 'jsons/tron_brick_breaker.json')",
     "date_added": "2023-06-08",
-    "click_count": 0
+    "session_click_count": 0,
+    "total_click_count": 0
 }

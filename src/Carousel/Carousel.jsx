@@ -34,24 +34,16 @@ const Carousel = () => {
   var gameData = [];
 
   const handleButtonClick = (event, jsonData) => {
-    console.log(gameData.length);
-    for(let i = 0; i < gameData.length; i++)
-    {
-      if(jsonData.id == gameData[i].id)
-      {
-        gameData[i].click_count++;
-        console.log(gameData[i].click_count);
-        break;
-      }
-    }
+    console.log(slider);
+    jsonData.session_click_count++;
   }
 
   function updateAllJSONFiles()
   {
       // Your function logic here
-      for(let i = 0; i < gameData.length; i++)
+      for(let i = 0; i < slider.length; i++)
       {
-          writeJSON(gameData[i]);
+          writeJSON(slider[i]);
       }
   }
 

@@ -5,10 +5,13 @@ const axios = require('axios');
 
 const app = express();
 const port = 3001; // Choose a port number
+const host = '10.154.57.156';
+
+var game_index = 0;
 
 // Enable CORS for all routes
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://10.154.57.156:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://' + host + ':3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -55,14 +58,19 @@ app.get('/swiper-content', (req, res) => {
     const filePath = path.join(folderPath, fileName);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const parsedContent = JSON.parse(fileContent);
+    if(parsedContent.id == -1)
+    {
+      parsedContent.id = game_index;
+      game_index++;
+    }
     fileContents.push(parsedContent);
   });
 
-  console.log(fileContents);
+  //console.log(fileContents);
 
   res.json(fileContents);
 });
 
-app.listen(port, '10.154.57.156', () => {
-  console.log(`Server running on http://10.154.57.156:${port}`);
+app.listen(port, host, () => {
+  console.log(`Server running on http://` + host + `:${port}`);
 });

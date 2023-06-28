@@ -9,6 +9,8 @@ import './Carousel.css'
 
 const Carousel = () => {
   const swiperRef = useRef(null);
+  const [showButtons, setShowButtons] = useState(false);
+  const timerRef = useRef(null);
 
   const goNext = () => {
     if(swiperRef.current && swiperRef.current.swiper) {
@@ -29,18 +31,59 @@ const Carousel = () => {
     }
   }
 
+  var gameData = [];
+
+  const handleButtonClick = (event, jsonData) => {
+    console.log(gameData.length);
+    for(let i = 0; i < gameData.length; i++)
+    {
+      if(jsonData.id == gameData[i].id)
+      {
+        gameData[i].click_count++;
+        console.log(gameData[i].click_count);
+        break;
+      }
+    }
+  }
+
+  function updateAllJSONFiles()
+  {
+      // Your function logic here
+      for(let i = 0; i < gameData.length; i++)
+      {
+          writeJSON(gameData[i]);
+      }
+  }
+
+  window.onbeforeunload = updateAllJSONFiles;
+
   const [slider, setSlider] = useState([]);
 
   useEffect(() => {
     axios.get('http://10.154.57.156:3001/swiper-content')
       .then(response => {
         const sliderData = response.data;
+        gameData = sliderData;
         setSlider(sliderData);
+        setShowButtons(false); // Initially show buttons
+        startTimer(); // Start the timer
       })
       .catch(error => {
         console.error(error);
       });
   }, []);
+
+  const startTimer = () => {
+    timerRef.current = setTimeout(() => {
+      setShowButtons(true); // Hide buttons after the delay
+    }, 3000);
+  };
+
+  const handleSlideChange = () => {
+    clearTimeout(timerRef.current); // Reset the timer
+    setShowButtons(false); // Show buttons
+    startTimer(); // Start the timer again
+  };
 
   return (
     <div className='carousel'>
@@ -64,12 +107,21 @@ const Carousel = () => {
             }}
             loop={true}
             slidesPerView={2}
+            onSlideChange={handleSlideChange}
           >
             {slider.map(data => (
               <SwiperSlide key={data.title} className='myswiper-slider'>
                 <div className='slide'>
                   <h1>{data.title}</h1>
-                  <img src={data.main_image} alt={data.title} />
+                  <div className={`image-container${showButtons ? ' show-buttons' : ''}`}>
+                    <img src={data.main_image} alt={data.title} className={`swiper-image${showButtons ? ' show-buttons' : ''}`} />
+                    {showButtons && (
+                      <div className='buttons'>
+                        <button className='play-button' onClick={(event) => handleButtonClick(event, data)}>play</button>
+                        <button className='info-button'>more info</button>
+                      </div>
+                    )}
+                  </div>
                   <p>{data.description}</p>
                 </div>
               </SwiperSlide>

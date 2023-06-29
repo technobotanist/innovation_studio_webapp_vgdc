@@ -10,7 +10,7 @@
     "images": ["(insert file paths for images here separated by commas)"],
     "json_src": "./dist/jsons/inflipity.json",
     "onclick": "changeSrc('game_builds/inflipity/index.html', false, 'jsons/inflipity.json')",
-    "date_added": "2023-06-09",
+    "date_added": "2024-01-01",
     "session_click_count": 0,
     "total_click_count": 0
 }

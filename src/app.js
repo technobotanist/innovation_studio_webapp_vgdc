@@ -21,13 +21,15 @@ const App = () => {
     return (
         <div className="app">
           <div className="top-gradient-strip"></div>
-          <div className="top-menu">
+          {/* <div className="top-menu">
             <p>SORT BY</p>
+            <div className="subheading">
+              <p>RECENTLY ADDED</p>
+            </div>
+          </div> */}
+          <div className='carousel-component'>
+            <Carousel />
           </div>
-          <div className="subheading">
-            <p>RECENTLY ADDED</p>
-          </div>
-          <Carousel />
           <div className="bottom-gradient-strip"></div>
         </div>
       );

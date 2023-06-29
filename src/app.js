@@ -7,7 +7,7 @@ const App = () => {
 
     const writeJSON = (newData) => {
         axios
-          .post('http://10.154.57.156:3001/updateJson', newData)
+          .post('http://10.42.0.1:3001/updateJson', newData)
           .then(() => {
             console.log('JSON file updated successfully');
           })

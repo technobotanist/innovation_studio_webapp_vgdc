@@ -5,6 +5,14 @@
     z-index: 10;
 }
 
+.active {
+    display: black;
+}
+
+.inactive {
+    display: none;
+}
+
 .carousel{
     position: relative;
     width: 100%;

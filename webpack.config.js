@@ -33,11 +33,23 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
     ],
   },  
   devServer: {
     static: path.resolve(__dirname, 'dist'),
-    host: '10.154.57.156',
+    host: '10.154.43.56',
     port: 3000,
     open: true,
   },

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './info_page.css'
 
+import home_icon from "./home_icon.png";
+
 const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
         const [isStarted, setIsStarted] = useState(false);
         const handleClick = () => {
@@ -52,9 +54,9 @@ const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
                         play
                     </button>
                 </div>
-                <div className ="back-button-info">
+                <div className ="home-button-info">
                     <button onClick={setCarouselActive}>
-                        home
+                        <img src={home_icon} alt="home icon" />
                     </button>
                 </div>
             </div>

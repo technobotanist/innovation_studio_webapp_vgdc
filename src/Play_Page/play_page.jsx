@@ -24,23 +24,18 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                     <h1>AUTHORS:</h1>
                     <p>{data.authors}</p>
                 </div>
-        
+
+                <div className ="info-button-play">
+                    <button onClick={setInfoActive}>
+                        more info
+                    </button>
+                </div>
             </div>
 
             <div className="button-tray">
-                <div className ="expand-button">
-                    <button>
-                        expand
-                    </button>
-                </div>
                 <div className='home-button'>
                     <button onClick={setCarouselActive}>
                         <img src={home_icon} alt="home icon" />
-                    </button>
-                </div>
-                <div className ="info-button-play">
-                    <button onClick={setInfoActive}>
-                        info
                     </button>
                 </div>
             </div>

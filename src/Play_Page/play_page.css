@@ -37,63 +37,63 @@
     line-height: 1.5;
 }
 
+.controls {
+    display: block;
+    position: relative;
+}
+
+.controls p {
+    padding-bottom: 10%;
+}
+
+.overview {
+    display: block;
+    position: relative;
+}
+
+.overview p {
+    padding-bottom: 10%;
+}
+
+.authors {
+    display: block;
+    position: relative;
+}
+
+.authors p {
+    padding-bottom: 10%;
+}
+
 .button-tray {
     display: flex;
     flex-direction: row;
     position: absolute;
     top: 85%;
-    left: 1%;
     width: 80%;
     height: 15%;
 }
 
-.expand-button {
-    position: relative;
-    top: 50%;
-    left: 45%;
-    width: 5%;
-    height: 5%;
-}
-
-.expand-button button {
-    font: Lato;
-    font-size: 18px;
-    text-decoration: underline;
-    background: none;
-    border: none;
-    padding: 0;
-    color: white;
-    white-space: nowrap;
-    display: inline-block;
-    text-align: center;
-}
-
 .info-button-play {
     position: relative;
-    top: 50%;
-    left: 51%;
-    width: 5%;
+    width: 55%;
     height: 5%;
 }
 
 .info-button-play button {
-    font: Lato;
-    font-size: 18px;
-    text-decoration: underline;
-    background: none;
+    display: block;
+    position: absolute;
+    background: #D14905;
+    width: 100%;
+    height: 39px;
+    border-radius: 24px;
     border: none;
-    padding: 0;
-    color: white;
-    white-space: nowrap;
-    display: inline-block;
-    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
 .home-button {
     display: block;
     position: relative;
     top: 45%;
-    left: 47.5%;
     width: 5%;
     height: 5%;
 }

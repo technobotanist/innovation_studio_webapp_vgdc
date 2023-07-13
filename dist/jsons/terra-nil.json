@@ -1,18 +1,18 @@
 {
-  "id": 30,
+  "id": 29,
   "title": "Terra Nil",
   "authors": "",
-  "description": "Terra Nil is a game about transforming a barren, lifeless landscape into a thriving, vibrant ecosystem. Turn dead soil into fertile grassland, clean polluted oceans, plant sprawling forests, and create the ideal habitat for animals to call home. Then recycle your buildings and leave no trace that you were there. Reclaim the wasteland.",
-  "mechanics": "",
-  "aesthetics": "",
-  "background": "",
+  "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+  "mechanics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+  "aesthetics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+  "background": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
   "genres": [
     "list",
     "of genres",
     "separated by",
     "commas"
   ],
-  "controls": "",
+  "controls": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
   "supported_controllers": [
     "put a 1 here for touch or 0 if not supported",
     "put a 1 here for keyboard/mouse or a 0 if not supported",

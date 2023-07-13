@@ -207,6 +207,10 @@ const Carousel = () => {
                   slideShadows: false
                 }}
                 loop={filteredItems.length > 3}
+                autoplay={{
+                  delay: 20000,
+                  disableOnInteraction: true,
+                }}
                 slidesPerView={2}
                 onSlideChange={handleSlideChange}
               >

@@ -1,0 +1,113 @@
+.PlayPage {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.game-div {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 80%;
+    height: 80%;
+}
+
+.game-iframe {
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+.info-div {
+    display: block;
+    position: absolute;
+    width: 15%;
+    height: auto;
+    left: 83%;
+    top: 7%;
+    line-height: 1.5;
+}
+
+.controls {
+    display: block;
+    position: relative;
+}
+
+.controls p {
+    padding-bottom: 10%;
+}
+
+.overview {
+    display: block;
+    position: relative;
+}
+
+.overview p {
+    padding-bottom: 10%;
+}
+
+.authors {
+    display: block;
+    position: relative;
+}
+
+.authors p {
+    padding-bottom: 10%;
+}
+
+.button-tray {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 85%;
+    width: 80%;
+    height: 15%;
+}
+
+.info-button-play {
+    position: relative;
+    width: 55%;
+    height: 5%;
+}
+
+.info-button-play button {
+    display: block;
+    position: absolute;
+    background: #D14905;
+    width: 100%;
+    height: 39px;
+    border-radius: 24px;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.home-button {
+    display: block;
+    position: relative;
+    top: 45%;
+    width: 5%;
+    height: 5%;
+}
+
+.home-button button {
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.home-button img {
+    width: 50%;
+    height: auto;
+    overflow: normal;
+    border-radius: 5px;
+    border: none;
+}

@@ -1,0 +1,129 @@
+.InformationPage {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    word-spacing: 2px;
+}
+
+.title h1 {
+    position: relative;
+    font: Lato;
+    font-size: 55px;
+    font-weight: bolder;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    /* padding-left: 130px; */
+}
+
+.subheading {
+    position: relative;
+    font: Lato;
+    font-size: 24px;
+    font-weight: lighter;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.paragraph {
+    position: relative;
+    font: Lato;
+    font-size: 18px;
+    font-weight: small;
+    padding-right: 10%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 16%;
+    width: 50%;
+    height: auto;
+    overflow: scroll;
+}
+
+.image-div {
+    display: block;
+    position: absolute;
+    width: 45%;
+    height: 100%;
+}
+
+.image1 {
+    display: block;
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: auto;
+    overflow: normal;
+    border-radius: 38px;
+    opacity: 60%;
+}
+
+.start-button {
+    position: absolute;
+    left: 45%;
+    top: 44%;
+    width: 20%;
+    height: 10%;
+}
+
+.start-button button {
+    display: inline-block;
+    background-color: rgba(209, 73, 5, 1);
+    color: white;
+    font: Lato;
+    font-size: 14px;
+    text-align: center; 
+    padding: 5% 25%;
+    border-radius: 25px;
+    border-style: hidden;
+    box-shadow: 1px 4px rgba(.5, .5, .5, .5); /* Adjust the values as per your preference */
+      
+}
+
+.home-button-info {
+    display: block;
+    position: absolute;
+    top: 89%;
+    left: 2.5%;
+    width: 10%;
+    height: 10%;
+}
+
+.home-button-info button {
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.home-button-info img {
+    width: 50%;
+    height: auto;
+    overflow: normal;
+    border-radius: 5px;
+    border: none;
+}
+
+.next-button {
+    position: absolute;
+    right: 7%;
+    top: 90%;
+    background: none;
+}
+
+.next-button button {
+    font: Lato;
+    font-size: 24px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    color: rgba(0, 132, 115, 1);
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+}

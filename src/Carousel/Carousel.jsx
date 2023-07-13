@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper'
 import axios from 'axios';
 
+import InformationPage from '../Info_Page/info_page.jsx';
+import PlayPage from '../Play_Page/play_page.jsx';
+
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import './Carousel.css'
@@ -11,6 +14,7 @@ const Carousel = () => {
   const swiperRef = useRef(null);
   const [showButtons, setShowButtons] = useState(false);
   const timerRef = useRef(null);
+  const [data, setData] = useState('');
 
   const goNext = () => {
     if(swiperRef.current && swiperRef.current.swiper) {
@@ -31,11 +35,41 @@ const Carousel = () => {
     }
   }
 
-  var gameData = [];
+  const [isActiveCarousel, setActiveCarousel] = useState(true);
+  const [isActivePlay, setActivePlay] = useState(false);
+  const [isActiveInfo, setActiveInfo] = useState(false);
 
-  const handleButtonClick = (event, jsonData) => {
-    console.log(slider);
+  const handleButtonClick = (event, jsonData, type) => {
+    setActiveCarousel(!isActiveCarousel);
+    setData(jsonData);
+
+    if(type=="play") {
+      setActivePlay(true);
+    }
+    else if(type=="info") {
+      setActiveInfo(true);
+    }
+
+    console.log(jsonData);
     jsonData.session_click_count++;
+  }
+
+  const setCarouselActive = () => {
+    setActivePlay(false);
+    setActiveInfo(false);
+    setActiveCarousel(true);
+  }
+
+  const setInfoActive = () => {
+    setActiveCarousel(false);
+    setActivePlay(false);
+    setActiveInfo(true);
+  }
+
+  const setPlayActive = () => {
+    setActiveCarousel(false);
+    setActiveInfo(false);
+    setActivePlay(true);
   }
 
   function updateAllJSONFiles()
@@ -55,7 +89,6 @@ const Carousel = () => {
     axios.get('http://10.42.0.1:3001/swiper-content')
       .then(response => {
         const sliderData = response.data;
-        gameData = sliderData;
         setSlider(sliderData);
         setShowButtons(false); // Initially show buttons
         startTimer(); // Start the timer
@@ -102,19 +135,6 @@ const Carousel = () => {
     }
   };
 
-  var sort_date_text = "Newest";
-
-  const sortItemsByDate = (a, b) => {
-    if (filters.release_date === 'newest') {
-      sort_date_text = "Newest";
-      return new Date(b.date_added) - new Date(a.date_added);
-    } else if (filters.date === 'oldest') {
-      sort_date_text = "Oldest";
-      return new Date(a.date_added) - new Date(b.date_added);
-    }
-    return 0;
-  };
-
   const filterItems = (item) => {
     if (filters.genres.length > 0 && !filters.genres.some((genre) => item.genres.includes(genre))) {
       return false;
@@ -123,101 +143,101 @@ const Carousel = () => {
     return true;
   };
 
-  const filteredItems = slider.filter(filterItems).sort(sortItemsByDate);
+  const filteredItems = slider.filter(filterItems);
 
   return (
     <div>
-      <div className='filters'>
-        {/* Filter options */}
-        <div className='genre-select'>
-          <p>Genres</p>
+      <div className={isActiveCarousel ? 'active' : 'inactive'}>
+        <div className='filters'>
+          {/* Filter options */}
+          <div className='genre-select'>
+            <p>Genres</p>
 
-          <label>
-            <input
-              type="checkbox"
-              name="genres"
-              value="action"
-              checked={filters.genres.includes('action')}
-              onChange={handleFilterChange}
-            />
-            Action
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="genres"
-              value="puzzle"
-              checked={filters.genres.includes('puzzle')}
-              onChange={handleFilterChange}
-            />
-            Puzzle
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="genres"
-              value="survival"
-              checked={filters.genres.includes('survival')}
-              onChange={handleFilterChange}
-            />
-            Survival
-          </label>
+            <label>
+              <input
+                type="checkbox"
+                name="genres"
+                value="action"
+                checked={filters.genres.includes('action')}
+                onChange={handleFilterChange}
+              />
+              Action
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="genres"
+                value="puzzle"
+                checked={filters.genres.includes('puzzle')}
+                onChange={handleFilterChange}
+              />
+              Puzzle
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="genres"
+                value="survival"
+                checked={filters.genres.includes('survival')}
+                onChange={handleFilterChange}
+              />
+              Survival
+            </label>
+          </div>
         </div>
 
-        <select name="date" value={filters.release_date} onChange={handleFilterChange} className='date-dropdown'>
-          <option value="">Select Date Order</option>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-        </select>
-
-        <p className='sort-date-text'>{sort_date_text}</p>
-      </div>
-
-      {/* Swiper component */}
-      <div className='carousel'>
-        <div className='swiper-button-next' onClick={goNext}></div>
-        <>
-          {filteredItems.length > 0 && (
-            <Swiper
-              {...swiperParams}
-              ref={swiperRef}
-              className='myswiper'
-              modules={[EffectCoverflow, Autoplay]}
-              effect='coverflow'
-              grabCursor={true}
-              centeredSlides={true}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 3,
-                slideShadows: false
-              }}
-              loop={filteredItems.length > 3}
-              slidesPerView={2}
-              onSlideChange={handleSlideChange}
-            >
-              {filteredItems.map(data => (
-                <SwiperSlide key={data.title} className='myswiper-slider'>
-                  <div className='slide'>
-                    <h1>{data.title}</h1>
-                    <div className={`image-container${showButtons ? ' show-buttons' : ''}`}>
-                      <img src={data.main_image} alt={data.title} className={`swiper-image${showButtons ? ' show-buttons' : ''}`} />
-                      {showButtons && (
-                        <div className='buttons'>
-                          <button className='play-button' onClick={(event) => handleButtonClick(event, data)}>play</button>
-                          <button className='info-button'>more info</button>
-                        </div>
-                      )}
+        {/* Swiper component */}
+        <div className='carousel'>
+          <div className='swiper-button-next' onClick={goNext}></div>
+          <>
+            {filteredItems.length > 0 && (
+              <Swiper
+                {...swiperParams}
+                ref={swiperRef}
+                className='myswiper'
+                modules={[EffectCoverflow, Autoplay]}
+                effect='coverflow'
+                grabCursor={true}
+                centeredSlides={true}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 3,
+                  slideShadows: false
+                }}
+                loop={filteredItems.length > 3}
+                slidesPerView={2}
+                onSlideChange={handleSlideChange}
+              >
+                {filteredItems.map(data => (
+                  <SwiperSlide key={data.title} className='myswiper-slider'>
+                    <div className='slide'>
+                      <h1>{data.title}</h1>
+                      <div className={`image-container${showButtons ? ' show-buttons' : ''}`}>
+                        <img src={data.main_image} alt={data.title} className={`swiper-image${showButtons ? ' show-buttons' : ''}`} />
+                        {showButtons && (
+                          <div className='buttons'>
+                            <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
+                            <button className='info-button'onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
+                          </div>
+                        )}
+                      </div>
+                      <p>{data.description}</p>
                     </div>
-                    <p>{data.description}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-        </>
-        <div className='swiper-button-prev' onClick={goPrev}></div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
+          </>
+          <div className='swiper-button-prev' onClick={goPrev}></div>
+        </div>
+      </div>
+      <div  className={isActiveInfo ? 'active' : 'inactive'}>
+        <InformationPage data={data} setCarouselActive={setCarouselActive} setPlayActive={setPlayActive} />
+      </div>
+      <div className={isActivePlay ? 'active' : 'inactive'}>
+        <PlayPage data={data} setCarouselActive={setCarouselActive} setInfoActive={setInfoActive} isActivePlay={isActivePlay} />
       </div>
     </div>
   );

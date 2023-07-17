@@ -13,7 +13,7 @@
     display: none;
 }
 
-.carousel{
+.CarouselPage {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -22,78 +22,78 @@
 }
 
 @media screen and (min-width: 48rem) {
-    .carousel {
+    .CarouselPage {
         display: flex;
         align-items: center;
     }
 }
 
-.myswiper {
+.CarouselPage .myswiper {
     width: 95%;
     padding-top: 0rem;
 }
 
-.myswiper-slider{
+.CarouselPage .myswiper-slider{
     width: 25rem;
     height: 45rem;
 }
 
-.swiper-slide-active {
+.CarouselPage .swiper-slide-active {
     width: 30rem;
     height: 50rem;
 }
 
-.image-container {
+.CarouselPage .image-container {
     position: relative;
     display: inline-block;
     width: 70%;
 }
 
-.myswiper-slider p {
+.CarouselPage .myswiper-slider p {
     display: none;
     opacity: 0;
     padding-bottom: 0.625rem;
 }
 
-.myswiper-slider h1 {
+.CarouselPage .myswiper-slider h1 {
     padding-bottom: 25px;
     opacity: .5;
 }
 
-.myswiper-slider img {
-    width:100%;
+.CarouselPage .myswiper-slider img {
+    width: 100%;
     height: auto;
     overflow: hidden;
     opacity: .5;
     border-radius: 38px;
 }
 
-.myswiper-slider .play-button {
+.CarouselPage .myswiper-slider .play-button {
     display: none;
 }
 
-.myswiper-slider .info-button {
+.CarouselPage .myswiper-slider .info-button {
     display: none;
 }
 
-.swiper-slide-active p {
+.CarouselPage .swiper-slide-active p {
     display: block;
     opacity: 1;
-    text-align: center;
+    text-align: justify;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 3%;
     line-height: 1.5;
 }
 
-.swiper-slide-active h1 {
+.CarouselPage .swiper-slide-active h1 {
     padding-top: 25px;
     padding-bottom: 25px;
     opacity: 1;
     font-size: 48px;
 }
 
-.swiper-slide-active .swiper-image {
+.CarouselPage .swiper-slide-active .swiper-image {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -103,51 +103,49 @@
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.5);
 }
 
-.swiper-slide-active .swiper-image.show-buttons {
-    opacity: 0.5;
+.CarouselPage .swiper-slide-active .buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
 }
 
-.swiper-slide-active .play-button {
+.CarouselPage .swiper-slide-active .play-button {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
+    position: relative;
     background: #D14905;
     width: 128px;
     height: 40px;
     border-radius: 24px;
     border: none;
     transition: opacity 0.3s ease;
+    margin-right: 5%;
 }
 
-.swiper-slide-active button {
+.CarouselPage .swiper-slide-active button {
     box-shadow: 1px 4px rgba(.5, .5, .5, .5);
 }
 
-.play-button:hover {
+.CarouselPage .play-button:hover {
     background: #c2490d;
 }
 
-.swiper-slide-active .info-button {
+.CarouselPage .swiper-slide-active .info-button {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    position: relative;
     background: #D14905;
     width: 160px;
     height: 39px;
     border-radius: 24px;
     border: none;
     transition: opacity 0.3s ease;
+    margin-left: 5%;
 }
 
-.info-button:hover {
+.CarouselPage .info-button:hover {
     background: #c2490d;
 }
 
-.slide {
+.CarouselPage .carousel-page-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,20 +155,20 @@
     overflow: hidden; 
 }
 
-.swiper-slide-prev {
+.CarouselPage .swiper-slide-prev {
     padding-left: 225px;
 }
 
-.swiper-slide-next {
+.CarouselPage .swiper-slide-next {
     padding-right: 225px;
 }
 
-.swiper-button-next {
+.CarouselPage .swiper-button-next {
     color: white;
     padding-right: 25px;
 }
 
-.swiper-button-prev {
+.CarouselPage .swiper-button-prev {
     color: white;
     padding-left: 25px;
 }
@@ -194,14 +192,4 @@
     font-size: 32px;
     font-weight: lighter; 
     padding-bottom: 10px;
-}
-
-.date-dropdown {
-    color: black;
-}
-
-.sort-date-text {
-    padding-top: 10px;
-    font-size: 32px;
-    font-weight: lighter; 
 }

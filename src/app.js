@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom';
 import Carousel from './Carousel/Carousel.jsx';
 
 const App = () => {
+  const host = "10.154.43.56";
 
   const writeJSON = (newData) => {
       axios
-        .post('http://10.154.43.56:3001/updateJson', newData)
+        .post('http://' + host + ':3001/updateJson', newData)
         .then(() => {
           console.log('JSON file updated successfully');
         })

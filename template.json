@@ -6,14 +6,27 @@
     "mechanics": "",
     "aesthetics": "",
     "background": "",
+    "affiliation": "",
+    "biography": "",
     "genres": ["list", "of genres", "separated by", "commas"],
     "controls": "",
     "supported_controllers": ["put a 1 here for touch or 0 if not supported", "put a 1 here for keyboard/mouse or a 0 if not supported", "put a 1 here for controller or a 0 if not supported"],
     "main_image": "[insert file path to main image here]",
-    "images": ["(insert file paths for images here separated by commas)"],
+    "images": [
+        {
+            "src": "insert file path to image",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "insert file path to image",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "insert file path to image",
+            "alt": "insert alt text of image"
+        }
+    ],
     "json_src": "jsons/[insert file name here].json",
     "game_src": "[insert html src here]",
-    "date_added": "YYYY-MM-DD",
-    "session_click_count": 0,
-    "total_click_count": 0
+    "date_published": "YYYY-MM-DD"
 }

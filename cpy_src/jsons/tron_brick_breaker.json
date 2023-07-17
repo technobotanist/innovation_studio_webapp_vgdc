@@ -6,14 +6,27 @@
     "mechanics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
     "aesthetics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
     "background": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "affiliation": "",
+    "biography": "",
     "genres": ["action", "survival"],
     "controls": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
     "supported_controllers": [0, 1, 1],
     "main_image": "./images/tron-brick-breaker.png",
-    "images": ["(insert file paths for images here separated by commas)"],
+    "images": [
+        {
+            "src": "./images/image1.png",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "./images/image2.png",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "./images/image3.png",
+            "alt": "insert alt text of image"
+        }
+    ],
     "json_src": "./dist/jsons/tron_brick_breaker.json",
     "game_src": "game_builds/tron_brick_breaker/index.html",
-    "date_added": "2023-08-01",
-    "session_click_count": 0,
-    "total_click_count": 0
+    "date_published": "2023-08-01"
 }

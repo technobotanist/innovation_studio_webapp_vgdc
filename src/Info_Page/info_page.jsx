@@ -3,7 +3,7 @@ import './info_page.css'
 
 import home_icon from "./home_icon.png";
 
-const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
+const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) => {
         const [isStarted, setIsStarted] = useState(false);
         const handleClick = () => {
           setIsStarted(true);
@@ -61,8 +61,8 @@ const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
                 </div>
             </div>
             <div className ="next-button">
-                <button onClick={handleClick}>
-                    Next: Author Information
+                <button onClick={setAuthorActive}>
+                    Author Information
                 </button>
             </div>
         </div>

@@ -1,0 +1,109 @@
+.MediaPage {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.MediaPage .button-tray {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    height: 15%;
+}
+
+.MediaPage .back-button {
+    position: relative;
+    top: 35%;
+    left: 85%;
+    width: 5%;
+    height: 5%;
+}
+
+.MediaPage .back-button button {
+    font: Lato;
+    font-size: 24px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    color: rgba(0, 132, 115, 1);
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+}
+
+.MediaPage .play-button {
+    position: relative;
+    top: 35%;
+    left: 42.5%;
+    width: 5%;
+    height: 5%;
+}
+
+.MediaPage .play-button button {
+    display: inline-block;
+    background-color: rgba(209, 73, 5, 1);
+    color: white;
+    font: Lato;
+    font-size: 18px;
+    text-align: center; 
+    padding: 7px 30px;
+    border-radius: 25px;
+    border-style: hidden;
+    box-shadow: 4px 4px rgba(1, 1, 1, 1); /* Adjust the values as per your preference */
+}
+
+.MediaPage .media-home-button {
+    display: block;
+    position: absolute;
+    top: 89%;
+    left: 1.1%;
+    width: 4.5%;
+    height: 10%;
+}
+
+.MediaPage .media-home-button button {
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.MediaPage .media-home-button img {
+    width: 50%;
+    height: auto;
+    overflow: normal;
+    border-radius: 5px;
+    border: none;
+}
+
+.MediaPage .media-carousel {
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 5%;
+    left: 10%;
+}
+
+.MediaPage .media-carousel .carousel {
+    text-align: center;
+}
+
+.MediaPage .carousel-status {
+    display: none;
+}
+
+/* .MediaPage .slideImg {
+    width: 100%;
+    height: 80%;
+} */
+
+.MediaPage .slideImg img {
+    width: 65%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 38px;
+}

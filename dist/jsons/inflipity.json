@@ -1,5 +1,5 @@
 {
-  "id": 18,
+  "id": 6,
   "title": "Inflipity",
   "authors": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
   "description": "A simple one button game where you control gravity as an alien in a space helmet runs for its life through a broken space station.",
@@ -7,7 +7,7 @@
   "aesthetics": "Our focus with the aesthetics of the game was to make it feel like you were dodging space debris (asteroids, broken beams, etc.). Most of the art was taken from free asset packs, but the alien art and sound were created by members of the team.",
   "background": "This game was created as a two week mini project for the Advanced Game Projects class. For some members of the team, this was their first game, so this was quick and fun introduction into the world of game design before the larger projects got under way.",
   "affiliation": "College of Engineering, Department of Computer Science, Concentration in Game Development",
-  "biography": "",
+  "biography": "As students in the Game Development Concentration, we strive to make games that are both fun to play and additive to the vast gaming community.",
   "genres": [
     "action"
   ],
@@ -30,11 +30,19 @@
     {
       "src": "./images/image3.png",
       "alt": "insert alt text of image"
+    },
+    {
+      "src": "./images/inflipity.png",
+      "alt": "insert alt text of image"
+    },
+    {
+      "src": "./images/tron-brick-breaker.png",
+      "alt": "insert alt text of image"
     }
   ],
   "json_src": "./dist/jsons/inflipity.json",
   "game_src": "game_builds/inflipity/index.html",
   "date_published": "2024-01-01",
-  "total_click_count": 977,
+  "total_click_count": 1,
   "session_click_count": 0
 }

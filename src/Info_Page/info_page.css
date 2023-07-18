@@ -6,6 +6,14 @@
     word-spacing: 2px;
 }
 
+/* .InformationPage .active {
+    display: normal;
+}
+
+.InformationPage .inactive {
+    display: none;
+} */
+
 .InformationPage .title h1 {
     position: relative;
     font: Lato;
@@ -111,7 +119,7 @@
 
 .InformationPage .next-button {
     position: absolute;
-    left: 85%;
+    left: 80%;
     top: 90%;
     background: none;
 }

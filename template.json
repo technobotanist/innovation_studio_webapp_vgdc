@@ -2,31 +2,31 @@
     "id": -1,
     "title": "",
     "authors": "",
+    "affiliation": "",
+    "biography": "",
     "description": "",
+    "controls": "",
     "mechanics": "",
     "aesthetics": "",
     "background": "",
-    "affiliation": "",
-    "biography": "",
     "genres": ["list", "of genres", "separated by", "commas"],
-    "controls": "",
     "supported_controllers": ["put a 1 here for touch or 0 if not supported", "put a 1 here for keyboard/mouse or a 0 if not supported", "put a 1 here for controller or a 0 if not supported"],
-    "main_image": "[insert file path to main image here]",
+    "main_image": "./images/(image name here).png",
     "images": [
         {
-            "src": "insert file path to image",
+            "src": "./images/(image name here).png",
             "alt": "insert alt text of image"
         },
         {
-            "src": "insert file path to image",
+            "src": "./images/(image name here).png",
             "alt": "insert alt text of image"
         },
         {
-            "src": "insert file path to image",
+            "src": "./images/(image name here).png",
             "alt": "insert alt text of image"
         }
     ],
-    "json_src": "jsons/[insert file name here].json",
-    "game_src": "[insert html src here]",
+    "json_src": "./dist/jsons/(insert name of json file).json",
+    "game_src": "game_builds/(insert name of game)/index.html",
     "date_published": "YYYY-MM-DD"
 }

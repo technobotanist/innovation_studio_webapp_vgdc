@@ -30,16 +30,23 @@
 .PlayPage .info-div {
     display: block;
     position: absolute;
-    width: 15%;
+    width: 18%;
     height: auto;
-    left: 83%;
-    top: 7%;
+    left: 81.5%;
+    top: 4%;
     line-height: 1.5;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, #D14905, rgb(0,0,0,0)) 1;
 }
 
 .PlayPage .controls {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    text-align: justify;
 }
 
 .PlayPage .controls p {
@@ -49,6 +56,9 @@
 .PlayPage .overview {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
 }
 
 .PlayPage .overview p {
@@ -58,6 +68,9 @@
 .PlayPage .authors {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
 }
 
 .PlayPage .authors p {
@@ -77,6 +90,7 @@
     position: relative;
     width: 55%;
     height: 5%;
+    padding-left: 5%;
 }
 
 .PlayPage .info-button-play button {

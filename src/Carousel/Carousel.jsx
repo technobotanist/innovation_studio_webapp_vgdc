@@ -106,7 +106,7 @@ const Carousel = () => {
       }
   }
 
-  window.onbeforeunload = updateAllJSONFiles;
+  /* window.onbeforeunload = updateAllJSONFiles; */
 
   const [slider, setSlider] = useState([]);
 

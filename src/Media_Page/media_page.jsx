@@ -5,7 +5,7 @@ import "./media_page.css";
 
 import home_icon from "./home_icon.png";
 
-const MediaPage = ({data, setPlayActive, setInfoActive, setAuthorActive, setCarouselActive}) => {    
+const MediaPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) => {    
     
     const dummy_images = [
     {
@@ -31,7 +31,7 @@ const MediaPage = ({data, setPlayActive, setInfoActive, setAuthorActive, setCaro
             <div className="button-tray">
                 <div className ="back-button">
                     <button onClick={setAuthorActive}>
-                        Author Information
+                        AUTHOR INFORMATION
                     </button>
                 </div>
                 <div className="play-button">

@@ -15,7 +15,7 @@ import './Carousel.css'
 const Carousel = () => {
   const swiperRef = useRef(null);
   const [data, setData] = useState('');
-  const host = "10.154.43.56";
+  const host = "10.42.0.1";
 
   const goNext = () => {
     if(swiperRef.current && swiperRef.current.swiper) {

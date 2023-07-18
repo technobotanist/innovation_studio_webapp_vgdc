@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Carousel from './Carousel/Carousel.jsx';
 
 const App = () => {
-  const host = "10.154.43.56";
+  const host = "10.42.0.1";
 
   const writeJSON = (newData) => {
       axios

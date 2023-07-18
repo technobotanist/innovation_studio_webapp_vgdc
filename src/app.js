@@ -4,17 +4,18 @@ import ReactDOM from 'react-dom';
 import Carousel from './Carousel/Carousel.jsx';
 
 const App = () => {
+  const host = "10.154.43.56";
 
-    const writeJSON = (newData) => {
-        axios
-          .post('http://10.42.0.1:3001/updateJson', newData)
-          .then(() => {
-            console.log('JSON file updated successfully');
-          })
-          .catch((error) => {
-            console.error('Error updating JSON file:', error);
-          });
-    };
+  const writeJSON = (newData) => {
+      axios
+        .post('http://' + host + ':3001/updateJson', newData)
+        .then(() => {
+          console.log('JSON file updated successfully');
+        })
+        .catch((error) => {
+          console.error('Error updating JSON file:', error);
+        });
+  };
 
   window.writeJSON = writeJSON;
 

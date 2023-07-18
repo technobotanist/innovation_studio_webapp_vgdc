@@ -32,13 +32,13 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                 </div>
             </div>
 
-            <div className="button-tray">
+            {/* <div className="button-tray"> */}
                 <div className='home-button'>
                     <button onClick={setCarouselActive}>
                         <img src={home_icon} alt="home icon" />
                     </button>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 }

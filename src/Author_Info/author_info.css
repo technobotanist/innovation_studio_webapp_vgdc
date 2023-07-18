@@ -1,30 +1,26 @@
-.InformationPage {
+.AuthorPage {
     position: relative;
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
-    word-spacing: 2px;
 }
 
-/* .InformationPage .active {
-    display: normal;
+.AuthorPage .title {
+    display: block;
+    height: auto;
 }
 
-.InformationPage .inactive {
-    display: none;
-} */
-
-.InformationPage .title h1 {
+.AuthorPage .title h1 {
     position: relative;
     font: Lato;
     font-size: 55px;
     font-weight: bolder;
     padding-top: 7px;
     padding-bottom: 10px;
-    /* padding-left: 130px; */
+    /* padding-left: 130px; */ 
 }
 
-.InformationPage .subheading {
+.AuthorPage .author-subheading {
     position: relative;
     font: Lato;
     font-size: 24px;
@@ -33,16 +29,16 @@
     padding-bottom: 10px;
 }
 
-.InformationPage .paragraph {
+.AuthorPage .paragraph {
     position: relative;
     font: Lato;
     font-size: 18px;
     font-weight: small;
     padding-right: 10%;
-    text-align: justify;
+    /* padding-left: 130px; */
 }
 
-.InformationPage .text {
+.AuthorPage .text {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -53,14 +49,20 @@
     overflow: scroll;
 }
 
-.InformationPage .image-div {
+.AuthorPage .name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.AuthorPage .image-div {
     display: block;
     position: absolute;
     width: 45%;
     height: 100%;
 }
 
-.InformationPage .image1 {
+.AuthorPage .image1 {
     display: block;
     position: relative;
     top: 15%;
@@ -72,7 +74,7 @@
     opacity: 60%;
 }
 
-.InformationPage .start-button {
+.AuthorPage .start-button {
     position: absolute;
     left: 45%;
     top: 44%;
@@ -80,7 +82,7 @@
     height: 10%;
 }
 
-.InformationPage .start-button button {
+.AuthorPage .start-button button {
     display: inline-block;
     background-color: rgba(209, 73, 5, 1);
     color: white;
@@ -94,37 +96,14 @@
       
 }
 
-.InformationPage .home-button-info {
-    display: block;
+.AuthorPage .back-button {
     position: absolute;
-    top: 89%;
-    left: 2.5%;
-    width: 10%;
-    height: 10%;
-}
-
-.InformationPage .home-button-info button {
-    background: none;
-    border: none;
-    height: auto;
-}
-
-.InformationPage .home-button-info img {
-    width: 50%;
-    height: auto;
-    overflow: normal;
-    border-radius: 5px;
-    border: none;
-}
-
-.InformationPage .next-button {
-    position: absolute;
-    left: 80%;
+    left: 50%;
     top: 90%;
     background: none;
 }
 
-.InformationPage .next-button button {
+.AuthorPage .back-button button {
     font: Lato;
     font-size: 24px;
     text-decoration: underline;
@@ -135,4 +114,49 @@
     white-space: nowrap;
     display: inline-block;
     text-align: center;
+
+}
+
+.AuthorPage .next-button {
+    position: absolute;
+    left: 88%;
+    top: 90%;
+    background: none;
+}
+
+.AuthorPage .next-button button {
+    font: Lato;
+    font-size: 24px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    color: rgba(0, 132, 115, 1);
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+      
+}
+
+.AuthorPage .author-home-button {
+    display: block;
+    position: absolute;
+    top: 89%;
+    left: 2.5%;
+    width: 10%;
+    height: 10%;
+}
+
+.AuthorPage .author-home-button button {
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.AuthorPage .author-home-button img {
+    width: 50%;
+    height: auto;
+    overflow: normal;
+    border-radius: 5px;
+    border: none;
 }

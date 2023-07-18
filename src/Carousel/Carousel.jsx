@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import InformationPage from '../Info_Page/info_page.jsx';
 import PlayPage from '../Play_Page/play_page.jsx';
+import AuthorPage from '../Author_Info/author_info.jsx';
+import MediaPage from '../Media_Page/media_page.jsx';
 
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
@@ -12,9 +14,8 @@ import './Carousel.css'
 
 const Carousel = () => {
   const swiperRef = useRef(null);
-  const [showButtons, setShowButtons] = useState(false);
-  const timerRef = useRef(null);
   const [data, setData] = useState('');
+  const host = "10.154.43.56";
 
   const goNext = () => {
     if(swiperRef.current && swiperRef.current.swiper) {
@@ -38,6 +39,8 @@ const Carousel = () => {
   const [isActiveCarousel, setActiveCarousel] = useState(true);
   const [isActivePlay, setActivePlay] = useState(false);
   const [isActiveInfo, setActiveInfo] = useState(false);
+  const [isActiveAuthor, setActiveAuthor] = useState(false);
+  const [isActiveMedia, setActiveMedia] = useState(false);
 
   const handleButtonClick = (event, jsonData, type) => {
     setActiveCarousel(!isActiveCarousel);
@@ -57,19 +60,41 @@ const Carousel = () => {
   const setCarouselActive = () => {
     setActivePlay(false);
     setActiveInfo(false);
+    setActiveAuthor(false);
+    setActiveMedia(false);
     setActiveCarousel(true);
   }
 
   const setInfoActive = () => {
     setActiveCarousel(false);
     setActivePlay(false);
+    setActiveAuthor(false);
+    setActiveMedia(false);
     setActiveInfo(true);
   }
 
   const setPlayActive = () => {
     setActiveCarousel(false);
     setActiveInfo(false);
+    setActiveAuthor(false);
+    setActiveMedia(false);
     setActivePlay(true);
+  }
+
+  const setAuthorActive = () => {
+    setActiveCarousel(false);
+    setActivePlay(false);
+    setActiveInfo(false);
+    setActiveMedia(false);
+    setActiveAuthor(true);
+  }
+
+  const setMediaActive = () => {
+    setActiveCarousel(false);
+    setActivePlay(false);
+    setActiveInfo(false);
+    setActiveAuthor(false);
+    setActiveMedia(true);
   }
 
   function updateAllJSONFiles()
@@ -81,34 +106,20 @@ const Carousel = () => {
       }
   }
 
-  window.onbeforeunload = updateAllJSONFiles;
+  /* window.onbeforeunload = updateAllJSONFiles; */
 
   const [slider, setSlider] = useState([]);
 
   useEffect(() => {
-    axios.get('http://10.42.0.1:3001/swiper-content')
+    axios.get('http://' + host + ':3001/swiper-content')
       .then(response => {
         const sliderData = response.data;
         setSlider(sliderData);
-        setShowButtons(false); // Initially show buttons
-        startTimer(); // Start the timer
       })
       .catch(error => {
         console.error(error);
       });
   }, []);
-
-  const startTimer = () => {
-    timerRef.current = setTimeout(() => {
-      setShowButtons(true); // Hide buttons after the delay
-    }, 3000);
-  };
-
-  const handleSlideChange = () => {
-    clearTimeout(timerRef.current); // Reset the timer
-    setShowButtons(false); // Show buttons
-    startTimer(); // Start the timer again
-  };
 
   const [filters, setFilters] = useState({
     genres: [],
@@ -187,7 +198,7 @@ const Carousel = () => {
         </div>
 
         {/* Swiper component */}
-        <div className='carousel'>
+        <div className='CarouselPage'>
           <div className='swiper-button-next' onClick={goNext}></div>
           <>
             {filteredItems.length > 0 && (
@@ -207,22 +218,23 @@ const Carousel = () => {
                   slideShadows: false
                 }}
                 loop={filteredItems.length > 3}
+                autoplay={{
+                  delay: 20000,
+                  disableOnInteraction: true,
+                }}
                 slidesPerView={2}
-                onSlideChange={handleSlideChange}
               >
                 {filteredItems.map(data => (
                   <SwiperSlide key={data.title} className='myswiper-slider'>
-                    <div className='slide'>
+                    <div className='carousel-page-slide'>
                       <h1>{data.title}</h1>
-                      <div className={`image-container${showButtons ? ' show-buttons' : ''}`}>
-                        <img src={data.main_image} alt={data.title} className={`swiper-image${showButtons ? ' show-buttons' : ''}`} />
-                        {showButtons && (
-                          <div className='buttons'>
-                            <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
-                            <button className='info-button'onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
-                          </div>
-                        )}
+                      <div className='image-container'>
+                        <img src={data.main_image} alt={data.title} className='swiper-image' />
                       </div>
+                      <div className='buttons'>
+                          <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
+                          <button className='info-button'onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
+                        </div>
                       <p>{data.description}</p>
                     </div>
                   </SwiperSlide>
@@ -234,10 +246,16 @@ const Carousel = () => {
         </div>
       </div>
       <div  className={isActiveInfo ? 'active' : 'inactive'}>
-        <InformationPage data={data} setCarouselActive={setCarouselActive} setPlayActive={setPlayActive} />
+        <InformationPage data={data} setCarouselActive={setCarouselActive} setPlayActive={setPlayActive} setAuthorActive={setAuthorActive} />
       </div>
       <div className={isActivePlay ? 'active' : 'inactive'}>
         <PlayPage data={data} setCarouselActive={setCarouselActive} setInfoActive={setInfoActive} isActivePlay={isActivePlay} />
+      </div>
+      <div className={isActiveAuthor ? 'active' : 'inactive'}>
+        <AuthorPage data={data} setCarouselActive={setCarouselActive} setInfoActive={setInfoActive} setPlayActive={setPlayActive} setMediaActive={setMediaActive} />
+      </div>
+      <div className={isActiveMedia ? 'active' : 'inactive'}>
+        <MediaPage data={data} setCarouselActive={setCarouselActive} setPlayActive={setPlayActive} setAuthorActive={setAuthorActive} />
       </div>
     </div>
   );

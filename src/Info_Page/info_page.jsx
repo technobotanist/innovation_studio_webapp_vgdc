@@ -3,12 +3,10 @@ import './info_page.css'
 
 import home_icon from "./home_icon.png";
 
-const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
-        const [isStarted, setIsStarted] = useState(false);
-        const handleClick = () => {
-          setIsStarted(true);
-          // Perform any additional actions when the button is clicked
-        };
+const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) => {
+    
+    console.log(data.aesthetics);
+
     return(
         <div className ="InformationPage">
             <div className="text">
@@ -28,12 +26,14 @@ const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
                     </div>
                 </div>
 
-                <div className="aesthetics">
-                    <div className ="subheading">
-                        <h3>Genre and Aesthetics</h3>
-                    </div>
-                    <div className ="paragraph">
-                        <p>{data.aesthetics}</p>
+                <div className={data.aesthetics==="" ? "inactive" : "active"}>
+                    <div className="aesthetics">
+                        <div className ="subheading">
+                            <h3>Genre and Aesthetics</h3>
+                        </div>
+                        <div className ="paragraph">
+                            <p>{data.aesthetics}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -61,8 +61,8 @@ const InformationPage = ({data, setPlayActive, setCarouselActive}) => {
                 </div>
             </div>
             <div className ="next-button">
-                <button onClick={handleClick}>
-                    Next: Author Information
+                <button onClick={setAuthorActive}>
+                    AUTHOR INFORMATION
                 </button>
             </div>
         </div>

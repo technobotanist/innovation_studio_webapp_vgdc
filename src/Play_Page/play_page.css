@@ -5,7 +5,7 @@
     min-height: 100vh;
 }
 
-.game-div {
+.PlayPage .game-div {
     display: block;
     position: absolute;
     top: 4%;
@@ -14,7 +14,7 @@
     height: 80%;
 }
 
-.game-iframe {
+.PlayPage .game-iframe {
     display: block;
     position: absolute;
     left: 0%;
@@ -27,44 +27,57 @@
     border: none;
 }
 
-.info-div {
+.PlayPage .info-div {
     display: block;
     position: absolute;
-    width: 15%;
+    width: 18%;
     height: auto;
-    left: 83%;
-    top: 7%;
+    left: 81.5%;
+    top: 4%;
     line-height: 1.5;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, #D14905, rgb(0,0,0,0)) 1;
 }
 
-.controls {
+.PlayPage .controls {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    text-align: justify;
 }
 
-.controls p {
+.PlayPage .controls p {
     padding-bottom: 10%;
 }
 
-.overview {
+.PlayPage .overview {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
 }
 
-.overview p {
+.PlayPage .overview p {
     padding-bottom: 10%;
 }
 
-.authors {
+.PlayPage .authors {
     display: block;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
 }
 
-.authors p {
+.PlayPage .authors p {
     padding-bottom: 10%;
 }
 
-.button-tray {
+.PlayPage .button-tray {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -73,13 +86,14 @@
     height: 15%;
 }
 
-.info-button-play {
+.PlayPage .info-button-play {
     position: relative;
     width: 55%;
     height: 5%;
+    padding-left: 5%;
 }
 
-.info-button-play button {
+.PlayPage .info-button-play button {
     display: block;
     position: absolute;
     background: #D14905;
@@ -90,21 +104,28 @@
     transition: opacity 0.3s ease;
 }
 
-.home-button {
+.PlayPage .home-button {
     display: block;
-    position: relative;
-    top: 45%;
-    width: 5%;
-    height: 5%;
+    position: absolute;
+    top: 89%;
+    left: 1.1%;
+    width: 4.5%;
+    height: 10%;
 }
 
-.home-button button {
+.PlayPage .home-button button {
     background: none;
     border: none;
     height: auto;
 }
 
-.home-button img {
+.PlayPage .home-button img {
+    /* width: 60%;
+    height: auto;
+    overflow: normal;
+    border-radius: 5px;
+    border: none; */
+
     width: 50%;
     height: auto;
     overflow: normal;

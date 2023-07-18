@@ -235,7 +235,7 @@ const Carousel = () => {
                           <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
                           <button className='info-button'onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
                         </div>
-                      <p>{data.description}</p>
+                      <p>{data.short_description}</p>
                     </div>
                   </SwiperSlide>
                 ))}

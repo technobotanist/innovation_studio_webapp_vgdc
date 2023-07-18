@@ -13,7 +13,7 @@ const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActiv
                 <div className="title">
                     <h1>{data.title}</h1>
                     <div className ="paragraph">
-                        <p>{data.description}</p>
+                        <p>{data.long_description}</p>
                     </div>
                 </div>
 

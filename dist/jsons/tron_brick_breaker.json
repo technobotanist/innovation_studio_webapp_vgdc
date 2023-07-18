@@ -1,41 +1,33 @@
 {
-  "id": 31,
-  "title": "Tron Brick Breaker",
-  "authors": "Elliott Schultz",
-  "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "mechanics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "aesthetics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "background": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "affiliation": "",
-  "biography": "",
-  "genres": [
-    "action",
-    "survival"
-  ],
-  "controls": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "supported_controllers": [
-    0,
-    1,
-    1
-  ],
-  "main_image": "./images/tron-brick-breaker.png",
-  "images": [
-    {
-      "src": "./images/image1.png",
-      "alt": "insert alt text of image"
-    },
-    {
-      "src": "./images/image2.png",
-      "alt": "insert alt text of image"
-    },
-    {
-      "src": "./images/image3.png",
-      "alt": "insert alt text of image"
-    }
-  ],
-  "json_src": "./dist/jsons/tron_brick_breaker.json",
-  "game_src": "game_builds/tron_brick_breaker/index.html",
-  "date_published": "2023-08-01",
-  "total_click_count": 0,
-  "session_click_count": 0
+    "id": -1,
+    "title": "Tron Brick Breaker",
+    "authors": "Elliott Schultz",
+    "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "long_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus",
+    "mechanics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "aesthetics": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "background": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "affiliation": "",
+    "biography": "",
+    "genres": ["action", "survival"],
+    "controls": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+    "supported_controllers": [0, 1, 1],
+    "main_image": "./images/tron-brick-breaker.png",
+    "images": [
+        {
+            "src": "./images/image1.png",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "./images/image2.png",
+            "alt": "insert alt text of image"
+        },
+        {
+            "src": "./images/image3.png",
+            "alt": "insert alt text of image"
+        }
+    ],
+    "json_src": "./dist/jsons/tron_brick_breaker.json",
+    "game_src": "game_builds/tron_brick_breaker/index.html",
+    "date_published": "2023-08-01"
 }

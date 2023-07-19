@@ -195,7 +195,7 @@ const Carousel = () => {
               {genreSelect}
 
               <button className='add-genre' onClick={setGenreSelectActive}>
-                add genre
+                + add genre
               </button>
             </div>
           </div>

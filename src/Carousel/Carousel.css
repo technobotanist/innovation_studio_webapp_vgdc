@@ -189,7 +189,7 @@
     color: rgba(0, 132, 115, 1);
     border: none;
     font: Lato;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: underline;
 }
 
@@ -212,7 +212,7 @@
     font: Lato;
     font-size: 14px;
     text-align: center; 
-    border-radius: 25px;
+    border-radius: 38px;
     border-style: hidden;
 }
 
@@ -222,7 +222,7 @@
     width: 100%;
     height: 100%;
     z-index: 90;
-    background: rgba(1, 1, 1, 0.5);
+    background: rgba(1, 1, 1, 0.6);
 }
 
 .genre-select-module {
@@ -278,7 +278,7 @@
     color: white;
     font: Lato;
     font-size: 14px;
-    border-radius: 25px;
+    border-radius: 38px;
     border-style: hidden;
 }
 
@@ -289,7 +289,7 @@
     color: white;
     font: Lato;
     font-size: 14px;
-    border-radius: 25px;
+    border-radius: 38px;
     border-style: hidden;
 }
 

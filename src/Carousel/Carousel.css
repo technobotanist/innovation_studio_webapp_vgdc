@@ -184,15 +184,6 @@
     padding: 10px;
 }
 
-.add-genre {
-    background: none;
-    color: rgba(0, 132, 115, 1);
-    border: none;
-    font: Lato;
-    font-size: 20px;
-    text-decoration: underline;
-}
-
 .genre-list {
     display: flex;
     flex-direction: row;
@@ -297,5 +288,15 @@
     font-size: 32px;
     font-weight: lighter; 
     padding-top: 5px;
-    padding-right: 20px;
+    padding-right: 10px;
+}
+
+.add-genre {
+    background: none;
+    color: rgba(0, 132, 115, 1);
+    border: none;
+    font: Lato;
+    font-size: 20px;
+    text-decoration: underline;
+    padding-left: 10px;
 }

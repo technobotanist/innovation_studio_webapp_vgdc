@@ -123,26 +123,19 @@ const Carousel = () => {
 
   const [filters, setFilters] = useState({
     genres: [],
-    release_date: '',
   });
 
   const handleFilterChange = (event) => {
-    console.log("filter change");
-    const { name, value, type } = event.target;
-
-    if (type === 'checkbox') {
-      const isChecked = event.target.checked;
-      let updatedGenres;
-
-      if (isChecked) {
-        updatedGenres = [...filters.genres, value];
-      } else {
-        updatedGenres = filters.genres.filter((genre) => genre !== value);
-      }
-
-      setFilters({ ...filters, genres: updatedGenres });
+    const { name, value } = event.target;
+  
+    // Check if the genre is already selected
+    const isGenreSelected = filters.genres.includes(value);
+  
+    // Update the filters state based on the button click
+    if (isGenreSelected) {
+      setFilters({ ...filters, genres: filters.genres.filter((genre) => genre !== value) });
     } else {
-      setFilters({ ...filters, [name]: value });
+      setFilters({ ...filters, genres: [...filters.genres, value] });
     }
   };
 
@@ -155,45 +148,56 @@ const Carousel = () => {
   };
 
   const filteredItems = slider.filter(filterItems);
+  const [isActiveGenreSelect, setActiveGenreSelect] = useState(false);
+
+  const setGenreSelectActive = () =>
+  {
+    setActiveGenreSelect(true);
+  }
+
+  const setGenreSelectInactive = () =>
+  {
+    setActiveGenreSelect(false);
+  }
+
+  const genreText = ["adventure", "action", "puzzle", "visual novel", "role playing", "platformer", "shooter", "survival", "interactive fiction", "simulation", "strategy", "fighting", "card game", "educational", "racing", "rhythm", "sports"];
+
+  const genreSelect = genreText.map((genre) => (
+    <input 
+      key={genre}
+      type='button' 
+      name='genres' 
+      value={genre}
+      className={filters.genres.includes(genre) ? 'selected' : 'unselected'}
+      onClick={handleFilterChange}
+    />
+  ));
 
   return (
     <div>
       <div className={isActiveCarousel ? 'active' : 'inactive'}>
-        <div className='filters'>
-          {/* Filter options */}
-          <div className='genre-select'>
-            <p>Genres</p>
+        <div className={isActiveGenreSelect ? 'active' : 'inactive'}>
+          <div className='genre-select-background' onClick={setGenreSelectInactive}></div>
+          <div className='genre-select-module'>
+            <h1>SEARCH GENRES:</h1>
+            <button className='exit-genre-select' onClick={setGenreSelectInactive}>back</button>
+            <div className='genre-select'>
+              {genreSelect}
+            </div>
+          </div>
+        </div>
 
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="action"
-                checked={filters.genres.includes('action')}
-                onChange={handleFilterChange}
-              />
-              Action
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="puzzle"
-                checked={filters.genres.includes('puzzle')}
-                onChange={handleFilterChange}
-              />
-              Puzzle
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="survival"
-                checked={filters.genres.includes('survival')}
-                onChange={handleFilterChange}
-              />
-              Survival
-            </label>
+        <div className='filters'>
+          <div className='genres'>
+            <div className='genre-list'>
+              <p>GENRES:</p>
+
+              {genreSelect}
+
+              <button className='add-genre' onClick={setGenreSelectActive}>
+                add genre
+              </button>
+            </div>
           </div>
         </div>
 

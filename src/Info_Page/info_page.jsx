@@ -4,9 +4,6 @@ import './info_page.css'
 import home_icon from "./home_icon.png";
 
 const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) => {
-    
-    console.log(data.aesthetics);
-
     return(
         <div className ="InformationPage">
             <div className="text">

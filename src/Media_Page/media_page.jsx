@@ -7,6 +7,7 @@ import home_icon from "./home_icon.png";
 
 const MediaPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) => {    
     
+    /* Temporary image list for when data has not been defined */
     const dummy_images = [
     {
         src: "./images/image1.png",
@@ -15,12 +16,14 @@ const MediaPage = ({data, setPlayActive, setAuthorActive, setCarouselActive}) =>
 
     const images = data ? data.images : dummy_images;
 
+    /* Map the images from data to individual slides */
     const renderSlides = images.map((image) => (
         <div className="slideImg" key={image.alt}>
           <img src={image.src} alt={image.alt} />
         </div>
     ));
 
+    /* Handles the highlighting of the current slide in the thumbnail tray */
     const [currentIndex, setCurrentIndex] = useState();
     function handleChange(index) {
         setCurrentIndex(index);

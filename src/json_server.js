@@ -5,7 +5,8 @@ const axios = require('axios');
 const { json } = require('body-parser');
 
 const app = express();
-const port = 3001; // Choose a port number
+const port = 3001;
+/* IP address of host machine */
 const host = '10.154.43.56';
 
 var game_index = 0;

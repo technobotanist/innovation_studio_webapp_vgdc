@@ -245,7 +245,7 @@ const Carousel = () => {
                 }}
                 loop={filteredItems.length > 3}
                 autoplay={{
-                  delay: 20000,
+                  delay: 300000 / (slider.length * 2),
                   disableOnInteraction: true,
                 }}
                 slidesPerView={2}

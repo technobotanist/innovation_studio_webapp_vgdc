@@ -7,7 +7,8 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
     return(
         <div className ="PlayPage">
             <div className='game-div'>
-                <iframe className='game-iframe' src={isActivePlay ? data.game_src : ""} ></iframe>
+                {/* <iframe className='game-iframe' src={isActivePlay ? data.game_src : ""} ></iframe> */}
+                <iframe className='game-iframe' src={isActivePlay ? data.game_src : ""} allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" frameborder="0" allowfullscreen="true" scrolling="no" id="game_drop" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true"></iframe>
             </div>
             <div className='info-div'>
                 <div className='controls'>

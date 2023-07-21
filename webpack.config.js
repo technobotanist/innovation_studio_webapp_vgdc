@@ -49,7 +49,7 @@ module.exports = {
   },  
   devServer: {
     static: path.resolve(__dirname, 'dist'),
-    host: '10.42.0.1',
+    host: '10.42.0.1',  // IP address of host machine
     port: 3000,
     open: true,
   },

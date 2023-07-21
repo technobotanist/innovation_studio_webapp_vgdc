@@ -15,20 +15,25 @@ import './Carousel.css'
 const Carousel = () => {
   const swiperRef = useRef(null);
   const [data, setData] = useState('');
+
+  /* IP address of host machine */
   const host = "10.42.0.1";
 
+  /* Function to move carousel to the next slide */
   const goNext = () => {
     if(swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   }
 
+  /* Function to move carousel to the previous slide */
   const goPrev = () => {
     if(swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
   }
 
+  /* Parameters defining which classes are related to the next and previous buttons */
   const swiperParams = {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -42,6 +47,7 @@ const Carousel = () => {
   const [isActiveAuthor, setActiveAuthor] = useState(false);
   const [isActiveMedia, setActiveMedia] = useState(false);
 
+  /* Handles the play and more info button clicks */
   const handleButtonClick = (event, jsonData, type) => {
     setActiveCarousel(!isActiveCarousel);
     setData(jsonData);
@@ -57,6 +63,7 @@ const Carousel = () => {
     jsonData.session_click_count++;
   }
 
+  /* Function to set the Carousel Page to be the active page */
   const setCarouselActive = () => {
     setActivePlay(false);
     setActiveInfo(false);
@@ -65,6 +72,7 @@ const Carousel = () => {
     setActiveCarousel(true);
   }
 
+  /* Function to set the Info Page to be the active page */
   const setInfoActive = () => {
     setActiveCarousel(false);
     setActivePlay(false);
@@ -73,6 +81,7 @@ const Carousel = () => {
     setActiveInfo(true);
   }
 
+  /* Function to set the Play Page to be the active page */
   const setPlayActive = () => {
     setActiveCarousel(false);
     setActiveInfo(false);
@@ -81,6 +90,7 @@ const Carousel = () => {
     setActivePlay(true);
   }
 
+  /* Function to set the Author Page to be the active page */
   const setAuthorActive = () => {
     setActiveCarousel(false);
     setActivePlay(false);
@@ -89,6 +99,7 @@ const Carousel = () => {
     setActiveAuthor(true);
   }
 
+  /* Function to set the Media Page to be the active page */
   const setMediaActive = () => {
     setActiveCarousel(false);
     setActivePlay(false);
@@ -97,6 +108,7 @@ const Carousel = () => {
     setActiveMedia(true);
   }
 
+  /* Function that will write the locally stored versions of game information to the local json files */
   function updateAllJSONFiles()
   {
       // Your function logic here
@@ -106,10 +118,12 @@ const Carousel = () => {
       }
   }
 
+  /* Uncomment the next line if you actually want to write to the jsons when unloading the page. Currently, this is not needed as we aren't updating the local versions of the game info */
   /* window.onbeforeunload = updateAllJSONFiles; */
 
   const [slider, setSlider] = useState([]);
 
+  /* Function that calls the backend json server to retrieve all the game information */
   useEffect(() => {
     axios.get('http://' + host + ':3001/swiper-content')
       .then(response => {
@@ -121,31 +135,27 @@ const Carousel = () => {
       });
   }, []);
 
+  /* Defines the different filters. Currently just genres */
   const [filters, setFilters] = useState({
     genres: [],
-    release_date: '',
   });
 
+  /* Function that will update the active filters when a filter is added or removed */
   const handleFilterChange = (event) => {
-    console.log("filter change");
-    const { name, value, type } = event.target;
-
-    if (type === 'checkbox') {
-      const isChecked = event.target.checked;
-      let updatedGenres;
-
-      if (isChecked) {
-        updatedGenres = [...filters.genres, value];
-      } else {
-        updatedGenres = filters.genres.filter((genre) => genre !== value);
-      }
-
-      setFilters({ ...filters, genres: updatedGenres });
+    const { name, value } = event.target;
+  
+    // Check if the genre is already selected
+    const isGenreSelected = filters.genres.includes(value);
+  
+    // Update the filters state based on the button click
+    if (isGenreSelected) {
+      setFilters({ ...filters, genres: filters.genres.filter((genre) => genre !== value) });
     } else {
-      setFilters({ ...filters, [name]: value });
+      setFilters({ ...filters, genres: [...filters.genres, value] });
     }
   };
 
+  /* Function that applies the filters to a given list of game information */
   const filterItems = (item) => {
     if (filters.genres.length > 0 && !filters.genres.some((genre) => item.genres.includes(genre))) {
       return false;
@@ -154,46 +164,62 @@ const Carousel = () => {
     return true;
   };
 
+  /* Apply the filters to the main list of game information*/
   const filteredItems = slider.filter(filterItems);
+  const [isActiveGenreSelect, setActiveGenreSelect] = useState(false);
+
+  /* Function to activate the genre select panel */
+  const setGenreSelectActive = () =>
+  {
+    setActiveGenreSelect(true);
+  }
+
+  /* Function to deactivate the genre select panel */
+  const setGenreSelectInactive = () =>
+  {
+    setActiveGenreSelect(false);
+  }
+
+  /* List of genres */
+  const genreText = ["adventure", "action", "puzzle", "visual novel", "role playing", "platformer", "shooter", "survival", "interactive fiction", "simulation", "strategy", "fighting", "card game", "educational", "racing", "rhythm", "sports"];
+
+  /* Map the list of genres to clickable buttons */
+  const genreSelect = genreText.map((genre) => (
+    <input 
+      key={genre}
+      type='button' 
+      name='genres' 
+      value={genre}
+      className={filters.genres.includes(genre) ? 'selected' : 'unselected'}
+      onClick={handleFilterChange}
+    />
+  ));
 
   return (
     <div>
       <div className={isActiveCarousel ? 'active' : 'inactive'}>
-        <div className='filters'>
-          {/* Filter options */}
-          <div className='genre-select'>
-            <p>Genres</p>
+        <div className={isActiveGenreSelect ? 'active' : 'inactive'}>
+          <div className='genre-select-background' onClick={setGenreSelectInactive}></div>
+          <div className='genre-select-module'>
+            <h1>SEARCH GENRES:</h1>
+            <button className='exit-genre-select' onClick={setGenreSelectInactive}>back</button>
+            <div className='genre-select'>
+              {genreSelect}
+            </div>
+          </div>
+        </div>
 
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="action"
-                checked={filters.genres.includes('action')}
-                onChange={handleFilterChange}
-              />
-              Action
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="puzzle"
-                checked={filters.genres.includes('puzzle')}
-                onChange={handleFilterChange}
-              />
-              Puzzle
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="genres"
-                value="survival"
-                checked={filters.genres.includes('survival')}
-                onChange={handleFilterChange}
-              />
-              Survival
-            </label>
+        <div className='filters'>
+          <div className='genres'>
+            <div className='genre-list'>
+              <p>GENRES:</p>
+
+              {genreSelect}
+
+              <button className='add-genre' onClick={setGenreSelectActive}>
+                + add genre
+              </button>
+            </div>
           </div>
         </div>
 

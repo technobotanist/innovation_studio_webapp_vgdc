@@ -6,6 +6,7 @@ const { json } = require('body-parser');
 
 const app = express();
 const port = 3001; // Choose a port number
+/* IP address of host machine */
 const host = '10.42.0.1';
 
 var game_index = 0;

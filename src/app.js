@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import Carousel from './Carousel/Carousel.jsx';
 
 const App = () => {
+  /* IP address of host machine */
   const host = "10.42.0.1";
 
+  /* Function that calls the backend json server to write to the local json files */
   const writeJSON = (newData) => {
       axios
         .post('http://' + host + ':3001/updateJson', newData)

@@ -212,7 +212,7 @@ const Carousel = () => {
         <div className='filters'>
           <div className='genres'>
             <div className='genre-list'>
-              <p>GENRES:</p>
+              <p>SORT BY GENRES:</p>
 
               {genreSelect}
 
@@ -255,11 +255,11 @@ const Carousel = () => {
                     <div className='carousel-page-slide'>
                       <h1>{data.title}</h1>
                       <div className='image-container'>
-                        <img src={data.main_image} alt={data.title} className='swiper-image' />
+                        <img src={data.main_image} alt={data.title} className='swiper-image' onClick={(event) => handleButtonClick(event, data, "info")}/>
                       </div>
                       <div className='buttons'>
                           <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
-                          <button className='info-button'onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
+                          <button className='info-button' onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
                         </div>
                       <p>{data.short_description}</p>
                     </div>

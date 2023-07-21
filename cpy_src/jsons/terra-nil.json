@@ -9,7 +9,7 @@
     "background": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
     "affiliation": "",
     "biography": "",
-    "genres": ["list", "of genres", "separated by", "commas"],
+    "genres": ["strategy"],
     "controls": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
     "supported_controllers": ["put a 1 here for touch or 0 if not supported", "put a 1 here for keyboard/mouse or a 0 if not supported", "put a 1 here for controller or a 0 if not supported"],
     "main_image": "./images/image1.png",

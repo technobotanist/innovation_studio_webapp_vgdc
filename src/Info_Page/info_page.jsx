@@ -14,7 +14,7 @@ const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActiv
                     </div>
                 </div>
 
-                <div className="mechanics">
+                <div className={data.mechanics==="" ? "inactive" : "active"}>
                     <div className ="subheading">
                         <h3>Mechanics</h3>
                     </div>
@@ -34,7 +34,7 @@ const InformationPage = ({data, setPlayActive, setAuthorActive, setCarouselActiv
                     </div>
                 </div>
 
-                <div className="background">
+                <div className={data.background==="" ? "inactive" : "active"}>
                     <div className ="subheading">
                         <h3>Background</h3>
                     </div>

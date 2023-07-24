@@ -49,14 +49,13 @@ const Carousel = () => {
 
   /* Handles the play and more info button clicks */
   const handleButtonClick = (event, jsonData, type) => {
-    setActiveCarousel(!isActiveCarousel);
     setData(jsonData);
 
     if(type=="play") {
-      setActivePlay(true);
+      setPlayActive();
     }
     else if(type=="info") {
-      setActiveInfo(true);
+      setInfoActive();
     }
 
     console.log(jsonData);
@@ -65,11 +64,7 @@ const Carousel = () => {
 
   /* Function to set the Carousel Page to be the active page */
   const setCarouselActive = () => {
-    setActivePlay(false);
-    setActiveInfo(false);
-    setActiveAuthor(false);
-    setActiveMedia(false);
-    setActiveCarousel(true);
+    window.location.reload();
   }
 
   /* Function to set the Info Page to be the active page */
@@ -143,15 +138,24 @@ const Carousel = () => {
   /* Function that will update the active filters when a filter is added or removed */
   const handleFilterChange = (event) => {
     const { name, value } = event.target;
+
+    console.log(value);
+    let val = value;
+    if(val.indexOf('  ') != -1)
+    {
+      val = value.substring(0, value.indexOf('  '));
+    }
+
+    console.log(val);
   
     // Check if the genre is already selected
-    const isGenreSelected = filters.genres.includes(value);
+    const isGenreSelected = filters.genres.includes(val);
   
     // Update the filters state based on the button click
     if (isGenreSelected) {
-      setFilters({ ...filters, genres: filters.genres.filter((genre) => genre !== value) });
+      setFilters({ ...filters, genres: filters.genres.filter((genre) => genre !== val) });
     } else {
-      setFilters({ ...filters, genres: [...filters.genres, value] });
+      setFilters({ ...filters, genres: [...filters.genres, val] });
     }
   };
 
@@ -195,6 +199,19 @@ const Carousel = () => {
     />
   ));
 
+  /* Map the list of genres to clickable buttons */
+  const topGenreSelect = genreText.map((genre) => (
+    <div className={filters.genres.includes(genre) ? 'selected' : 'unselected'}>
+      <input 
+        key={genre}
+        type='button' 
+        name='genres' 
+        value={genre + "      x"}
+        onClick={handleFilterChange}
+      />
+    </div>
+  ));
+
   return (
     <div>
       <div className={isActiveCarousel ? 'active' : 'inactive'}>
@@ -214,10 +231,12 @@ const Carousel = () => {
             <div className='genre-list'>
               <p>SORT BY GENRES:</p>
 
-              {genreSelect}
+              <div className='top-genre-select'>
+               {topGenreSelect}
+              </div>
 
               <button className='add-genre' onClick={setGenreSelectActive}>
-                + add genre
+                + genre
               </button>
             </div>
           </div>
@@ -258,8 +277,7 @@ const Carousel = () => {
                         <img src={data.main_image} alt={data.title} className='swiper-image' onClick={(event) => handleButtonClick(event, data, "info")}/>
                       </div>
                       <div className='buttons'>
-                          <button className='play-button' onClick={(event) => handleButtonClick(event, data, "play")}>play</button>
-                          <button className='info-button' onClick={(event) => handleButtonClick(event, data, "info")}>more info</button>
+                          <button className='info-button' onClick={(event) => handleButtonClick(event, data, "info")}>learn more</button>
                         </div>
                       <p>{data.short_description}</p>
                     </div>

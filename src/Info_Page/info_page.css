@@ -6,14 +6,6 @@
     word-spacing: 2px;
 }
 
-/* .InformationPage .active {
-    display: normal;
-}
-
-.InformationPage .inactive {
-    display: none;
-} */
-
 .InformationPage .title h1 {
     position: relative;
     font: Lato;
@@ -110,7 +102,7 @@
 }
 
 .InformationPage .home-button-info img {
-    width: 50%;
+    width: 45%;
     height: auto;
     overflow: normal;
     border-radius: 5px;

@@ -16,6 +16,8 @@
 .CarouselPage {
     position: relative;
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     margin: 0 auto;
     min-height: 100vh;
     column-gap: 3rem;
@@ -109,24 +111,8 @@
     padding-top: 2%;
 }
 
-.CarouselPage .swiper-slide-active .play-button {
-    display: block;
-    position: relative;
-    background: #D14905;
-    width: 128px;
-    height: 40px;
-    border-radius: 24px;
-    border: none;
-    transition: opacity 0.3s ease;
-    margin-right: 5%;
-}
-
 .CarouselPage .swiper-slide-active button {
     box-shadow: 1px 4px rgba(.5, .5, .5, .5);
-}
-
-.CarouselPage .play-button:hover {
-    background: #c2490d;
 }
 
 .CarouselPage .swiper-slide-active .info-button {
@@ -195,10 +181,10 @@
     display: none;
 }
 
-.genre-list .selected {
+.genre-list .selected input {
     display: inline-block;
-    padding: 2px 20px;
-    background-color: rgb(136, 46, 1);
+    padding: 10px 20px;
+    background-color: rgba(209, 73, 5, 1);
     color: white;
     font: Lato;
     font-size: 14px;
@@ -292,11 +278,23 @@
 }
 
 .add-genre {
+    position: absolute;
     background: none;
     color: rgba(0, 132, 115, 1);
     border: none;
     font: Lato;
-    font-size: 20px;
-    text-decoration: underline;
+    font-size: 24px;
     padding-left: 10px;
+    top: 90px;
+    left: 30px;
+}
+
+.top-genre-select {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    max-height: 20%;
+    column-gap: 10px;
+    row-gap: 10px;
 }

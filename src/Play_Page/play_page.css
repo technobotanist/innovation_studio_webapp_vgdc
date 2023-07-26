@@ -116,6 +116,18 @@
     transition: opacity 0.3s ease;
 }
 
+.PlayPage .refresh-button {
+    position: absolute;
+    left: 6%;
+    top: 89.1%;
+    width: 2%;
+}
+
+.PlayPage .refresh-button img {
+    width: 100%;
+    height: auto;
+}
+
 .PlayPage .home-button {
     display: block;
     position: absolute;

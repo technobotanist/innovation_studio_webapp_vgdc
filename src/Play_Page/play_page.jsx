@@ -5,6 +5,7 @@ import home_icon from "./home_icon.png";
 import touch_icon from "./touchscreen_controllers.png";
 import keyboard_icon from "./wasd_controllers.png";
 import controller_icon from "./controllers_icon.png";
+import refresh_icon from "./refresh.png";
 
 const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
     const buttonRef = useRef(null);
@@ -49,6 +50,11 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
         console.log('Button clicked!');
     };
     
+    const refreshIframe = () => {
+        iframeRef.current.src = "";
+        iframeRef.current.src = data.game_src;
+    }
+    
     return(
         <div className ="PlayPage">
             <div ref={buttonRef} onClick={handleClick} className='game-div'>
@@ -82,6 +88,9 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                 <button onClick={setCarouselActive}>
                     <img src={home_icon} alt="home icon" />
                 </button>
+            </div>
+            <div className='refresh-button'>
+                <img onClick={refreshIframe} className='refresh' src={refresh_icon} />
             </div>
 
             <div className="button-tray">

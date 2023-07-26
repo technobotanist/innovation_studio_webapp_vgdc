@@ -10,7 +10,7 @@
     "affiliation": "College of Engineering, Department of Computer Science, Concentration in Game Development",
     "biography": "As a student in the Game Development Concentration, I strive to make games that are both fun to play and additive to the overall gaming community.",
     "genres": ["action", "survival", "casual"],
-    "controls": "For keyboard, use the Left and Right arrow keys to move the paddle and use the Enter key to play/pause. For controller, use the Left Stick to move the paddle and the X button to play/pause.",
+    "controls": "For keyboard, use the Left and Right arrow keys to move the paddle and use the Enter key to play/pause. For controller, use the Left Stick to move the paddle and the A button to play/pause.",
     "supported_controllers": [0, 1, 1],
     "main_image": "./images/tron-brick-breaker.png",
     "images": [

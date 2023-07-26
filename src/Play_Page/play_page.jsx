@@ -90,7 +90,7 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                 </button>
             </div>
             <div className='refresh-button'>
-                <img onClick={refreshIframe} className='refresh' src={refresh_icon} />
+                <img onClick={refreshIframe} className='refresh' src={refresh_icon} alt="refresh button" />
             </div>
 
             <div className="button-tray">

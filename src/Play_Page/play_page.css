@@ -44,7 +44,10 @@
     text-align: justify;
 }
 
-.PlayPage .controls p {
+.PlayPage .controls pre {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: pre-wrap;
     padding-bottom: 10%;
 }
 

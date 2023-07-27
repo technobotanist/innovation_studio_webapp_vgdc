@@ -37,7 +37,7 @@
 
 .MediaPage .play-button {
     position: relative;
-    top: 35%;
+    top: 45%;
     left: 42.5%;
     width: 5%;
     height: 5%;
@@ -84,7 +84,7 @@
     position: absolute;
     width: 80%;
     height: 80%;
-    top: 5%;
+    top: 3%;
     left: 10%;
 }
 

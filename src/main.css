@@ -7,6 +7,14 @@ body {
     background-color: #1A1A1A;
 }
 
+.active {
+    display: black;
+}
+
+.inactive {
+    display: none;
+}
+
 .top-gradient-strip {
     background: linear-gradient(180deg, rgba(0, 132, 115, 0.75), rgba(0, 132, 115, 0.315) 0.01%, rgba(0, 132, 115, 0) 100%);
     position: absolute;
@@ -62,4 +70,30 @@ body {
 .carousel-component {
     position: relative;
     z-index: 1;
+}
+
+.arcade-logo {
+    position: absolute;
+    right: 2.5%;
+    top: 84%;
+    width: auto;
+    height: auto;
+}
+
+.arcade-logo img {
+    width: 200px;
+    height: 100px;
+}
+
+.library-logo {
+    position: absolute;
+    right: 3%;
+    top: 90%;
+    height: 10%;
+    width: auto;
+}
+
+.library-logo img {
+    width: 400px;
+    height: 100px;
 }

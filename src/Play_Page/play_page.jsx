@@ -64,6 +64,17 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
             <div className='info-div'>
                 <div className='controls'>
                     <h1>CONTROLS:</h1>
+                    <div className="button-tray">
+                        <div className={supported_controllers[0]===1 ? 'active' : 'inactive'}>
+                            <img className='touch ' src={touch_icon} alt="touch icon"></img>
+                        </div>
+                        <div className={supported_controllers[1]===1 ? 'active' : 'inactive'}>
+                            <img className='keyboard ' src={keyboard_icon} alt="keyboard icon"></img>
+                        </div>
+                        <div className={supported_controllers[2]===1 ? 'active' : 'inactive'}>
+                            <img className='controller ' src={controller_icon} alt="controller icon"></img>
+                        </div>
+                    </div>
                     <p>{data.controls}</p>
                 </div>
 
@@ -91,18 +102,6 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
             </div>
             <div className='refresh-button'>
                 <img onClick={refreshIframe} className='refresh' src={refresh_icon} alt="refresh button" />
-            </div>
-
-            <div className="button-tray">
-                <div className={supported_controllers[0]===1 ? 'active' : 'inactive'}>
-                    <img className='touch ' src={touch_icon} alt="touch icon"></img>
-                </div>
-                <div className={supported_controllers[1]===1 ? 'active' : 'inactive'}>
-                    <img className='keyboard ' src={keyboard_icon} alt="keyboard icon"></img>
-                </div>
-                <div className={supported_controllers[2]===1 ? 'active' : 'inactive'}>
-                    <img className='controller ' src={controller_icon} alt="controller icon"></img>
-                </div>
             </div>
         </div>
     );

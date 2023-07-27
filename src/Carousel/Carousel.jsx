@@ -12,7 +12,7 @@ import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import './Carousel.css'
 
-const Carousel = () => {
+const Carousel = ({setLogosActive, setLogosInactive}) => {
   const swiperRef = useRef(null);
   const [data, setData] = useState('');
 
@@ -74,6 +74,7 @@ const Carousel = () => {
     setActiveAuthor(false);
     setActiveMedia(false);
     setActiveInfo(true);
+    setLogosActive();
   }
 
   /* Function to set the Play Page to be the active page */
@@ -83,6 +84,7 @@ const Carousel = () => {
     setActiveAuthor(false);
     setActiveMedia(false);
     setActivePlay(true);
+    setLogosActive();
   }
 
   /* Function to set the Author Page to be the active page */
@@ -92,6 +94,7 @@ const Carousel = () => {
     setActiveInfo(false);
     setActiveMedia(false);
     setActiveAuthor(true);
+    setLogosActive();
   }
 
   /* Function to set the Media Page to be the active page */
@@ -101,6 +104,7 @@ const Carousel = () => {
     setActiveInfo(false);
     setActiveAuthor(false);
     setActiveMedia(true);
+    setLogosInactive();
   }
 
   /* Function that will write the locally stored versions of game information to the local json files */

@@ -75,7 +75,7 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                             <img className='controller ' src={controller_icon} alt="controller icon"></img>
                         </div>
                     </div>
-                    <p>{data.controls}</p>
+                    <pre>{data.controls}</pre>
                 </div>
 
                 <div className='overview'>

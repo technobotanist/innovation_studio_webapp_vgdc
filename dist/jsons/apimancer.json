@@ -25,6 +25,10 @@
         {
             "src": "./images/apimancer/apimancer_ss3.png",
             "alt": "The Apimancer casts Honey Trap on the enemy wizard, reducing their movement the following turn."
+        },
+        {
+            "src": "./images/apimancer/0hoM1F.png",
+            "alt": "Apimancer main icon"
         }
     ],
     "json_src": "./dist/jsons/apimancer.json",

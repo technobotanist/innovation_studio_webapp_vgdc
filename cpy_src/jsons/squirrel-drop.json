@@ -29,6 +29,10 @@
         {
             "src": "./images/squirrel-drop/4.png",
             "alt": "player 2 gets a lead"
+        },
+        {
+            "src": "./images/squirrel-drop/main.png",
+            "alt": "squirrel drop main icon"
         }
     ],
     "json_src": "./dist/jsons/squirrel-drop.json",

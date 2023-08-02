@@ -1,0 +1,37 @@
+{
+    "id": -1,
+    "title": "Squirrel Drop",
+    "authors": "Phillips Albright, Nikolaus Johnson, Max Eddington, Carson Cole, Jerin Smith",
+    "affiliation": "Computer Science and Math major. Video Game Development Club",
+    "biography": "We are a team that formed during the fall game jam for the Video Game Development Club at NC State. We wanted to make a competitive game about trying to fall down a stage faster than your opponent, and our passion for golden dragon helped form our goals.",
+    "short_description": "Grab a friend and race to recieve your free soda from Golden Dragon in this 1v1 speedrunning game. Glide and dive to adjust your speed and try to get to the soda before your opponent while avoiding traps and predators. ",
+    "long_description": "Squirrel Drop is a 2 player competitive speedrunning platformer game where you will race against your opponent to reach the bottom of each level before them, receiving the glorious free soda from Golden Dragon.\nAs a flying squirrel you can dive, glide, and jump to navigate each level faster than your opponent. You can collect Golden Dragon coins to spawn extra obstacles for your opponent.\nTwo players can play on one keyboard, or each player can plug in their own controller. Three levels are included featuring great music and pixel art.\nThis game is a tribute to the Golden Dragon restaurant of Raleigh, NC, which has graciously granted our club free soda after our weekly meetings.",
+    "controls": "Keyboard:\nA/D for left and right movement\nW to glide\nS to dive\nSpace to jump\nGamepad:\nLeft/Right Dpad and stick for left and right movement\nUp Dpad or stick for glide\nDown Dpad or stick to dive\nBottom face button to jump.",
+    "mechanics": "Unlike most platformers or racing games ours focuses on falling down a level, rather than navigating up or forward. While falling through the air you can glide, giving you great horizontal control but making you fall slower, or dive, which makes you fall much faster at the cost of air control.",
+    "aesthetics": "Our game aims to have an autumn aesthetic, with brown and beige colors, falling leaves, trees, and animals that might live in the forest. This contributes to the 'Fall' theme in tandem with the fact that your goal in the game is to fall. It also captures the feeling of heading over to Golden Dragon after a VGDC meeting to get some soda, and racing to get a good seat.",
+    "background": "",
+    "genres": ["platformer", "racing"],
+    "supported_controllers": [0, 1, 1],
+    "main_image": "./images/squirrel-drop/main.png",
+    "images": [
+        {
+            "src": "./images/squirrel-drop/1.png",
+            "alt": "Both players have reached the end of the stage."
+        },
+        {
+            "src": "./images/squirrel-drop/2.png",
+            "alt": "Player 1 is stuck in some tree sap while player 2 tries to avoid Hawks"
+        },
+        {
+            "src": "./images/squirrel-drop/3.png",
+            "alt": "both players navigating around dangerous spikes"
+        },
+        {
+            "src": "./images/squirrel-drop/4.png",
+            "alt": "player 2 gets a lead"
+        }
+    ],
+    "json_src": "./dist/jsons/squirrel-drop.json",
+    "game_src": "game_builds/SquirrelDrop/index.html",
+    "date_published": "2022-11-02"
+}

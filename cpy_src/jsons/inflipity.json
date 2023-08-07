@@ -12,27 +12,27 @@
     "genres": ["action"],
     "controls": "Space/Tap Screen: Flip Gravity",
     "supported_controllers": [1, 1, 0],
-    "main_image": "./images/inflipity.png",
+    "main_image": "./images/inflipity/inflipity.png",
     "images": [
         {
-            "src": "./images/image1.png",
-            "alt": "insert alt text of image"
+            "src": "./images/inflipity/start-screen.png",
+            "alt": "Start screen of game"
         },
         {
-            "src": "./images/image2.png",
-            "alt": "insert alt text of image"
+            "src": "./images/inflipity/play-screen.png",
+            "alt": "Play screen of game"
         },
         {
-            "src": "./images/image3.png",
-            "alt": "insert alt text of image"
+            "src": "./images/inflipity/spin.png",
+            "alt": "Spinning obstacles"
         },
         {
-            "src": "./images/inflipity.png",
-            "alt": "insert alt text of image"
+            "src": "./images/inflipity/end-screen.png",
+            "alt": "End screen of game"
         },
         {
-            "src": "./images/tron-brick-breaker.png",
-            "alt": "insert alt text of image"
+            "src": "./images/inflipity/inflipity.png",
+            "alt": "Logo of game"
         }
     ],
     "json_src": "./dist/jsons/inflipity.json",

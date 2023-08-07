@@ -12,19 +12,27 @@
     "genres": ["action", "survival", "casual"],
     "controls": "For keyboard, use the Left and Right arrow keys to move the paddle and use the Enter key to play/pause. For controller, use the Left Stick to move the paddle and the A button to play/pause.",
     "supported_controllers": [0, 1, 1],
-    "main_image": "./images/tron-brick-breaker.png",
+    "main_image": "./images/tron-brick-breaker/logo.png",
     "images": [
         {
-            "src": "./images/image1.png",
-            "alt": "insert alt text of image"
+            "src": "./images/tron-brick-breaker/start-screen.png",
+            "alt": "Start screen of the game"
         },
         {
-            "src": "./images/image2.png",
-            "alt": "insert alt text of image"
+            "src": "./images/tron-brick-breaker/play-screen.png",
+            "alt": "Screen while playing game"
         },
         {
-            "src": "./images/image3.png",
-            "alt": "insert alt text of image"
+            "src": "./images/tron-brick-breaker/lose-screen.png",
+            "alt": "Screen when you lose the game"
+        },
+        {
+            "src": "./images/tron-brick-breaker/win-screen.png",
+            "alt": "Screen when you win the game"
+        },
+        {
+            "src": "./images/tron-brick-breaker/logo.png",
+            "alt": "logo for the game"
         }
     ],
     "json_src": "./dist/jsons/tron_brick_breaker.json",

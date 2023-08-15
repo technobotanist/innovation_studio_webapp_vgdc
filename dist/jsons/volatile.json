@@ -1,0 +1,42 @@
+{
+    "id": -1,
+    "title": "Vola-Tile",
+    "authors": "Aaron King, Phillips Albright, Elliott Schultz, Jack Grace, Tommy Riga, Abi",
+    "affiliation": "Undergraduate Students Majoring in Computer Science with a Concentration in Game Development as well as a Collegiate Partner at UNC School of the Arts",
+    "biography": "The Vola-Tile team was comprised of 5 Computer Science students at NCSU and 1 Sound Design student at UNCA. As students interested in making games, we strove to make something unique and additive to larger gaming community.",
+    "short_description": "In this game you play as a group of settlers trying to survive in a volatile new environment. You must gather resources to survive as the landscape rapidly changes around you.",
+    "long_description": "Vola-Tile is a survival game themed around the idea of cellular automata where you manage settlers on a generated grid world. Each type of tile in the environment contains its own set of rules that dictate how it changes over time, which can be learned and harnessed by the player.\nThis game is inspired by Conway's Game of Life, but seeks to expand the concept to represent a larger ecosystem which can be interacted with in interesting ways.",
+    "objective": "The main goal of the game is to survive, build your civilization, and ultimately have 10 settlers.",
+    "controls": "WASD for movement\nLeft click to select\nTab to view the forecast of next turn's tile swaps\nEscape to pause\nScroll to zoom",
+    "mechanics": "Every turn, each tile of the landscape can change based on a set of rules dictated by the surrounding tiles and the current weather. Each change is forecasted one turn in advance, so you have to decide how to handle those changes.",
+    "aesthetics": "",
+    "background": "This game was created over the course of a semester for the Advanced Game Projects class, the capstone to the Game Development Concentration.",
+    "genres": ["survival"],
+    "supported_controllers": [0, 1, 0],
+    "main_image": "./images/volatile/game_logo.png",
+    "images": [
+        {
+            "src": "./images/volatile/main_screen.png",
+            "alt": "Image of title screen of the game"
+        },
+        {
+            "src": "./images/volatile/small_island.png",
+            "alt": "Image showing custom 10x10 island"
+        },
+        {
+            "src": "./images/volatile/fire.png",
+            "alt": "Image showing the fire tile"
+        },
+        {
+            "src": "./images/volatile/studio_logo.png",
+            "alt": "Logo created for the class studio WolfStorm"
+        },
+        {
+            "src": "./images/volatile/game_logo.png",
+            "alt": "Logo for the game"
+        }
+    ],
+    "json_src": "./dist/jsons/volatile.json",
+    "game_src": "game_builds/volatile/index.html",
+    "date_published": "2023-04-18"
+}

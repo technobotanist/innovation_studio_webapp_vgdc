@@ -102,7 +102,7 @@
 
 .MediaPage .slideImg img {
     width: 65%;
-    height: auto;
+    max-height: 800px;
     overflow: hidden;
     border-radius: 38px;
 }

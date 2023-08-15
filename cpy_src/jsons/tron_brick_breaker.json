@@ -4,6 +4,7 @@
     "authors": "Elliott Schultz",
     "short_description": "Classic Brick Breaker in the art style of Tron",
     "long_description": "Have you ever wondered what Brick Breaker would look like if it existed in the Tron universe? Regardless, this game takes the bright, neon aesthetic of Tron and couples it with the classic game of Brick Breaker.",
+    "objective": "Move your paddle and bounce the ball to clear the screen of bricks.",
     "mechanics": "",
     "aesthetics": "While the Tron art style is simplistic, the neon lines and dark backgrounds give a unique look to a simple game, transforming the experiece into something that feels more modern while keeping the retro gameplay.",
     "background": "This game was made as the final project for the Computer Graphics class where we learned about the complex systems that go into rendering 3D models on a 2D screen. Taking inspiration from the projects we had done previously in class, I created this game to showcase all I had learned in the class.",

@@ -4,6 +4,7 @@
     "authors": "Elliott Schultz, Haley Barnette, Alex Owens, Tommy Riga",
     "short_description": "A simple one button game where you control gravity as an alien in a space helmet runs for its life through a broken space station.",
     "long_description": "A simple one button game where you control gravity as an alien in a space helmet runs for its life through a broken space station.",
+    "objective": "Survive as long as possible to achieve a high score.",
     "mechanics": "You control gravity by simply switching it between up and down, but every time you do, the alien speeds up. You can collect power-ups later to slow you down.",
     "aesthetics": "Our focus with the aesthetics of the game was to make it feel like you were dodging space debris (asteroids, broken beams, etc.). Most of the art was taken from free asset packs, but the alien art and sound were created by members of the team.",
     "background": "This game was created as a two week mini project for the Advanced Game Projects class. For some members of the team, this was their first game, so this was quick and fun introduction into the world of game design before the larger projects got under way.",

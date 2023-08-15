@@ -79,8 +79,8 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                 </div>
 
                 <div className='overview'>
-                    <h1>OVERVIEW:</h1>
-                    <p>{data.short_description}</p>
+                    <h1>OBJECTIVE:</h1>
+                    <p>{data.objective}</p>
                 </div>
 
                 <div className='authors'>

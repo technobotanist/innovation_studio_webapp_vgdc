@@ -1,6 +1,11 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url(Lato-Regular.ttf) format('truetype');
+}
+
 *{
     color: white;
-    font-family: Lato;
+    font-family: Lato-Regular;
 }
 
 body {

@@ -58,6 +58,7 @@ module.exports = {
       patterns: [
         { from: 'src/index.html', to: 'index.html' }, // Update the path if needed
         { from: 'src/main.css', to: 'main.css' },
+        { from: 'src/Lato-Regular.ttf', to: 'Local-Regular.ttf' },
       ],
     }),
   ],

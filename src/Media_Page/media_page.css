@@ -23,7 +23,7 @@
 }
 
 .MediaPage .back-button button {
-    font: Lato;
+    font: Lato-Regular;
     font-size: 24px;
     text-decoration: underline;
     background: none;
@@ -47,7 +47,7 @@
     display: inline-block;
     background-color: rgba(209, 73, 5, 1);
     color: white;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 18px;
     text-align: center; 
     padding: 7px 30px;

@@ -12,7 +12,7 @@
 
 .AuthorPage .title h1 {
     position: relative;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 55px;
     font-weight: bolder;
     padding-top: 7px;
@@ -22,7 +22,7 @@
 
 .AuthorPage .author-subheading {
     position: relative;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 24px;
     font-weight: lighter;
     padding-top: 30px;
@@ -31,7 +31,7 @@
 
 .AuthorPage .paragraph {
     position: relative;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 18px;
     font-weight: small;
     padding-right: 10%;
@@ -86,7 +86,7 @@
     display: inline-block;
     background-color: rgba(209, 73, 5, 1);
     color: white;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 14px;
     text-align: center; 
     padding: 5% 25%;
@@ -103,7 +103,7 @@
 }
 
 .AuthorPage .back-button button {
-    font: Lato;
+    font: Lato-Regular;
     font-size: 24px;
     text-decoration: underline;
     background: none;
@@ -124,7 +124,7 @@
 }
 
 .AuthorPage .next-button button {
-    font: Lato;
+    font: Lato-Regular;
     font-size: 24px;
     text-decoration: underline;
     background: none;

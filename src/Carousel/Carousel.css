@@ -178,7 +178,7 @@
     padding: 10px 20px;
     background-color: rgba(209, 73, 5, 1);
     color: white;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 14px;
     text-align: center; 
     border-radius: 38px;
@@ -222,7 +222,7 @@
     right: 5%;
     color: rgba(0, 132, 115, 1);
     border: none;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 18px;
     text-decoration: underline;
     background: none;
@@ -245,7 +245,7 @@
     padding: 2% 4%;
     background-color: rgba(209, 73, 5, 1);
     color: white;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 14px;
     border-radius: 38px;
     border-style: hidden;
@@ -256,7 +256,7 @@
     padding: 2% 4%;
     background-color: rgb(136, 46, 1);
     color: white;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 14px;
     border-radius: 38px;
     border-style: hidden;
@@ -274,7 +274,7 @@
     background: none;
     color: rgba(0, 132, 115, 1);
     border: none;
-    font: Lato;
+    font: Lato-Regular;
     font-size: 24px;
     padding-left: 10px;
     top: 90px;

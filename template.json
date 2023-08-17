@@ -13,18 +13,18 @@
     "background": "",
     "genres": ["list", "of genres", "separated by", "commas"],
     "supported_controllers": ["put a 1 here for touch or 0 if not supported", "put a 1 here for keyboard/mouse or a 0 if not supported", "put a 1 here for controller or a 0 if not supported"],
-    "main_image": "./images/(image name here).png",
+    "main_image": "./images/(name_of_game)/(image name here).png",
     "images": [
         {
-            "src": "./images/(image name here).png",
+            "src": "./images/(name_of_game)/(image name here).png",
             "alt": "insert alt text of image"
         },
         {
-            "src": "./images/(image name here).png",
+            "src": "./images/(name_of_game)/(image name here).png",
             "alt": "insert alt text of image"
         },
         {
-            "src": "./images/(image name here).png",
+            "src": "./images/(name_of_game)/(image name here).png",
             "alt": "insert alt text of image"
         }
     ],

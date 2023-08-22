@@ -83,11 +83,6 @@ const PlayPage = ({data, setInfoActive, setCarouselActive, isActivePlay}) => {
                     <p>{data.objective}</p>
                 </div>
 
-                <div className='authors'>
-                    <h1>AUTHORS:</h1>
-                    <p>{data.authors}</p>
-                </div>
-
                 <div className ="info-button-play">
                     <button onClick={setInfoActive}>
                         more info

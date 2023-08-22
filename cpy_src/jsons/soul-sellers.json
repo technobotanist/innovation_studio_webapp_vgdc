@@ -1,0 +1,55 @@
+{
+    "id": -1,
+    "title": "Soul Sellers",
+    "authors": "Duncan Glynn, Max Eddington, Violet Stokoszynski",
+    "affiliation": "Duncan - Computer Science, Max - College of Design, Violet - Collegiate Partner (outside NC State)",
+    "biography": "Duncan Glynn is a senior at NC State studying Computer Science and Game Development. He has been designing and programming games since early high school and wants to pursue independent game development in the future.",
+    "short_description": "Soul Sellers is a top-down grindfest game made for Ludum Dare 52. Play as the grim reaper, as you harvest the souls of monsters and sell them to a ghostly client.",
+    "long_description": "Play as a Soul Seller, as you spend each day making a living harvesting the souls of monsters at the local graveyard. For each soul harvesting session, the player may choose 3 enemies to do combat against for the next minute, as the monsters' numbers grow larger and larger throughout the day. Once the day is done, will you head back to the shop with your earnings, or stay through the dangerous night to harvest even more souls.",
+    "objective": "Ultimately, the Soul Seller's goal is to earn as much money as possible through selling souls, but they can also earn money by completing quests for a Ghost NPC. Gold can be used to purchase upgrades or new spawners to fight tougher enemies, which drop souls that are worth more gold.",
+    "controls": "Mouse and Keyboard:\nMovement - WASD\nAttack - Left click / Arrow keys\nCharge attack - Hold and release attack for 1 second\nDash - Right click / space\nPause - Esc\n\nController:\nMovement - Left Joystick\nAttack - Right Joystick\nCharge Attack - Hold and release right joystick for 1 second\nDash - RT/R2\nPause - Start",
+    "mechanics": "Enemies have unique AI that interacts with the player in different ways, and the selling mechanic makes fighting tougher enemies worth it. After 60 seconds have passed in-game and nighttime begins, enemy spawn rates are increased and the player can leave or risk their life to gather more souls.",
+    "aesthetics": "Soul Sellers uses a cute pixel art style with bright colors and cutesy interpretations of many classic creatures from western mythology. This style was chosen to help the player easily identify the position of the player, enemies, etc. during gameplay in which the screen may be swarmed with enemies.",
+    "background": "",
+    "genres": ["action", "survival"],
+    "supported_controllers": [0, 1, 1],
+    "main_image": "./images/soul-sellers/CoverImage.png",
+    "images": [
+        {
+            "src": "./images/soul-sellers/TitleScreen.png",
+            "alt": "The first screen that the player sees. The player can select their control scheme on the next screen."
+        },
+        {
+            "src": "./images/soul-sellers/Dialogue.png",
+            "alt": "The player can complete quests for a Ghost NPC by giving him souls in exchange for gold. The first quest is to collect 15 slime souls, which can be gathered by defeating slimes."
+        },
+        {
+            "src": "./images/soul-sellers/SpawnerSelection.png",
+            "alt": "This screen allows the player to choose which enemies to fight. By default, one ghost spawner and two slime spawners are selected. More spawner types are unlockable through the shop."
+        },
+        {
+            "src": "./images/soul-sellers/DaytimeCombat.png",
+            "alt": "The player fights slimes and ghosts in order to harvest their souls. They must survive for at least 1 minute in order to leave the graveyard and return to the shop."
+        },
+        {
+            "src": "./images/soul-sellers/ShopScreen.png",
+            "alt": "After leaving the graveyard, the player may sell their souls for gold or use them to complete quests by trading with the Ghost NPC. New spawners and upgrades can be unlocked."
+        },
+        {
+            "src": "./images/soul-sellers/Nighttime.png",
+            "alt": "After 1 minute has passed, it becomes nighttime and the spawn rate of enemies increases. The player is attacked by a hoard of zombies, slimes, and ghosts."
+        },
+        {
+            "src": "./images/soul-sellers/Vampire.png",
+            "alt": "Once the player has enough gold, they can purchase a coffin to spawn vampires: fearsome foes that summon skeletons to attack the player."
+        }
+        ,
+        {
+            "src": "./images/soul-sellers/CoverImage.png",
+            "alt": "Cover Image for the game"
+        }
+    ],
+    "json_src": "./dist/jsons/soul-sellers.json",
+    "game_src": "game_builds/soul-sellers/index.html",
+    "date_published": "2023-01-09"
+}

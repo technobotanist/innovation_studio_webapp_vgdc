@@ -50,6 +50,6 @@
         }
     ],
     "json_src": "./dist/jsons/soul-sellers.json",
-    "game_src": "game_builds/soul-sellers/index.html",
+    "game_src": "game_builds/Soul-Sellers/index.html",
     "date_published": "2023-01-09"
 }

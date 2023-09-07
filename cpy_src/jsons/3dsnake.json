@@ -1,0 +1,38 @@
+{
+    "id": -1,
+    "title": "3D Snake",
+    "authors": "Jayden Sansom",
+    "affiliation": "Major in Computer Science - Game Development, and a minor in Art & Design",
+    "biography": "Jayden Sansom is a Computer Science major studying game development with an Art & Design minor. She aspires to work as a technical artist or director in the game industry, primarily focusing on shaders, materials, and textures!",
+    "short_description": "It is the classic game you know and love, but in 3D!",
+    "long_description": "Eat apples and grow big and strong without coiling yourself in a knot or falling off the edge! Enjoy a fun take on a retro game classic by exploring it in a new 3D world!",
+    "objective": "Eat as many apples as possible, winning once you eat enough that the snake is finally full!",
+    "controls": "Space - Begin the game\nEscape - Leave the game\nEnter - Restart the game\nW or Left - Move directionally to the left\nD or Right - Move directionally to the right",
+    "mechanics": "Instead of using a classic grid structure to move four ways, the movement is instead steering the head of the snake! Move with W and D or Left and Right to control the snake!",
+    "aesthetics": "This game was made in a short amount of time, therefore, had to have quickly-produced models and textures. Even with the time limit, I aimed to create a cute take on the game while also having a low-poly feel. I hope that is creates a sense of familiarity of the classic while adding something new for the player!",
+    "background": "This game was created for CSC461, Computer Graphics, as my final project. I was given the choice to work on a brick-breaker game but found that something unique was more my speed. I ended up working along, and as someone who usually works on game art, the gameplay programming was a challenge but I am happy with my results!",
+    "genres": ["action"],
+    "supported_controllers": [0, 1, 0],
+    "main_image": "./images/3D_Snake/3dsnakemainimage.png",
+    "images": [
+        {
+            "src": "./images/3D_Snake/3dsnake1.png",
+            "alt": "Unity Screen - Created in Unity3D with few scripts and assets."
+        },
+        {
+            "src": "./images/3D_Snake/3dsnake2.png",
+            "alt": "Gameplay - Gameplay frame of heading towards the apple."
+        },
+        {
+            "src": "./images/3D_Snake/3dsnake3.png",
+            "alt": "Before Start- Before the player selects space to start."
+        },
+        {
+            "src": "./images/3D_Snake/3dsnakemainimage.png",
+            "alt": "Main Image"
+        }
+    ],
+    "json_src": "./dist/jsons/3dsnake.json",
+    "game_src": "game_builds/3D_Snake/index.html",
+    "date_published": "2022-12-01"
+}

@@ -15,6 +15,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+/** Creates the root that is inserted into the webpage */
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

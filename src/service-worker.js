@@ -1,3 +1,5 @@
+//Added this as an attempt to do caching, though it is not fully implemented and I don't konw how to expand upon it
+
 self.addEventListener('install', event => {
     event.waitUntil(
          caches.open('my-cache').then(cache => {

@@ -268,7 +268,7 @@ const Carousel = ({setLogosActive, setLogosInactive}) => {
                 }}
                 loop={filteredItems.length > 3}
                 autoplay={{
-                  delay: 300000 / (slider.length * 2),
+                  delay: Math.max(300000 / (slider.length * 2), 30000),
                   disableOnInteraction: true,
                 }}
                 slidesPerView={2}

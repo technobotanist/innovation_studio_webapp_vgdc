@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 
 import './main.css';
 
+/** This was an attempt at getting caching to work, though this may be unnecessary now */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then(registration => {

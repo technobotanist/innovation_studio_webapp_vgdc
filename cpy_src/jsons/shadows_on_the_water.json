@@ -1,0 +1,34 @@
+{
+    "id": -1,
+    "title": "Shadows on the Water",
+    "authors": "Green, Monica Jin, Adriana Hernandez, Jayda Murray, Ben Antinozzi, Lindsey Wilson, Vineet Krishna, Adam Slade",
+    "affiliation": "College of Design students, College of Engineering students, College of Sciences Alumni",
+    "biography": "",
+    "short_description": "Instructed with the help of Golden Dragon, follow two strangers as they explore an ancient water temple to acquire a legendary artifact. In this Rom-Com visual novel adventure, your dialogue choices could sway hearts or leave the characters burning with hatred for each other. Will you make it to the artifact with the hope that love exists?",
+    "long_description": "From team Kween Mothers, explore this romantic comedy and join Margaret and Vincent in searching for a legendary artifact from the Aurum tribe in Elemetallia. Take Golden Dragon’s advice and place yourself in the other’s shoes as you decide how to sway hearts and acquire the artifact.",
+    "objective": "Make dialogue decisions for Margaret, carefully choosing options to reach a mutually beneficial ending (and more!) as they embark on their water temple adventure.",
+    "controls": "(e.g W-move upA-move right\nS-move down\nD-move right)",
+    "mechanics": "We utilize cha“rizz”matic choices to determine the narrative outcome of the game.",
+    "aesthetics": "We wanted to translate the coldness of the water temple along with an eerie, mysterious, and majestical ambiance. Since the game involves romance and comedic elements, we designed stylistic characters with primarily cool color palettes and dark purple lineart to mesh them with the background art.",
+    "background": "Green: Happy to make this. Monica: Satisfied with digital artwork! Adriana: Music invokes wonder &amp; mystery. Jayda: Made awesome dialogue &amp; art! Ben: Optimized code for teamwork. Lindsey: Did VAing for the 1st time! Vineet: Difficult but fun doing VA. Adam: Liked trying different VA voices!",
+    "genres": ["adventure", "visual novel", "interactive fiction"],
+    "supported_controllers": [1,1,0],
+    "main_image": "./images/name_of_game/shadows_on_the_water/Title Screen - Manaka Green.png",
+    "images": [
+        {
+            "src": "./images/shadows_on_the_water/Cutscene1-ManakaGreen.png",
+            "alt": "Cutscene 1: The adventurers look up at the water temple."
+        },
+        {
+            "src": "./images/shadows_on_the_water/Cutscene5-ManakaGreen.png",
+            "alt": "Cutscene 5: Margaret writes notes in her journal while Vincent watches."
+        },
+        {
+            "src": ".images/shadows_on_the_water/Screenshot-ManakaGreen.png",
+            "alt": "Screenshot: The duo are superimposed against an underwater tunnel."
+        }
+    ],
+    "json_src": "./dist/jsons/shadows_on_the_water.json",
+    "game_src": "game_builds/shadows_on_the_water/index.html",
+    "date_published": "2023-11-01"
+}

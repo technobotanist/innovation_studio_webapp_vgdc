@@ -13,10 +13,10 @@
     "background": "Green: Happy to make this. Monica: Satisfied with digital artwork! Adriana: Music invokes wonder &amp; mystery. Jayda: Made awesome dialogue &amp; art! Ben: Optimized code for teamwork. Lindsey: Did VAing for the 1st time! Vineet: Difficult but fun doing VA. Adam: Liked trying different VA voices!",
     "genres": ["adventure", "visual novel", "interactive fiction"],
     "supported_controllers": [1,1,0],
-    "main_image": "./images/name_of_game/shadows_on_the_water/Title Screen - Manaka Green.png",
+    "main_image": "./images/shadows_on_the_water/TitleScreen-ManakaGreen.png",
     "images": [
         {
-            "src": "./images/shadows_on_the_water/Cutscene1-ManakaGreen.png",
+            "src": "./images/shadows_on_the_water/Cutscene1-ManakaGreen.png", 
             "alt": "Cutscene 1: The adventurers look up at the water temple."
         },
         {

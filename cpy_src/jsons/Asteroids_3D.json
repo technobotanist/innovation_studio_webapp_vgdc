@@ -1,0 +1,34 @@
+{
+    "id": -1,
+    "title": "Asteroids 3D",
+    "authors": "Mitchell Dunning, Udayan Senapati, Kyle Murley",
+    "affiliation": "College of Engineering (All) and College of Design (Mitchell)",
+    "biography": "Our group first created Asteroids 3D as the final project for our Computer Graphics course. Since then, my teammates Udayan and Kyle have graduated and I've worked to polish our rough little arcade game into something a bit more presentable. We hope you enjoy blasting some big rocks in space!",
+    "short_description": "In this extra-dimensional twist on the classic arcade game, blast through asteroids as fast as you can to rack up score before time runs out.",
+    "long_description": "Welcome to Asteroids 3D, a game about flying around in space, shooting at big rocks. Try to rack up the highest score possible before dying or running out the clock.",
+    "objective": "Get the highest score you can in the allotted time",
+    "controls": "Move Mouse / RS - Look, turn, & aim. WASD / LS - Thrust Laterally. Left Shift / LT - Main Engine (Forwards) Booster. Space / A - Thrust up. Left Ctrl / B - Thrust down. Q / LB - Roll left. E / RB - Roll right. Tab / Y - Switch weapons. Left Mouse Button / RT - Shoot. Number 1 / Select - Switch between 3rd and 1st person. Esc / Start - Pause Menu",
+    "mechanics": "Space ship flight controls.  Ability to swap between 1st and 3rd person perspectives",
+    "aesthetics": "1-bit 3D, attempting to emulate the classic vector style by borrowing visual tricks from games like Return of the Obra Dinn. We even used some slightly altered sound effects from the original Asteroids arcade game. The fast paced gameplay and retro aesthetics aim to give the player a classic score-chasing arcade experience.",
+    "background": "",
+    "genres": ["Action", "Shooter", "Simulation"],
+    "supported_controllers": [0, 1, 1],
+    "main_image": "./images/Asteroids_3D/ebjLrM - Mitchell Dunning.png",
+    "images": [
+        {
+            "src": "./images/Asteroids_3D/iCjgbK - Mitchell Dunning",
+            "alt": "Asteroids 3D start screen"
+        },
+        {
+            "src": "./images/Asteroids_3D/3Gw475 - Mitchell Dunning",
+            "alt": "Asteroids 3D Game Over screen"
+        },
+        {
+            "src": "./images/Asteroids_3D/ZSqvXg - Mitchell Dunning",
+            "alt": "Asteroids 3D gameplay"
+        }
+    ],
+    "json_src": "./dist/jsons/Asteroids_3D.json",
+    "game_src": "game_builds/Asteroids_3D/index.html",
+    "date_published": "2024-03-01"
+}
